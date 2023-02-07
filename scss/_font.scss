@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$de_font : 'SpoqaHanSansNeo';
+
+@mixin title_font {
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    color: #242424;
+    font-family: $de_font;
+}

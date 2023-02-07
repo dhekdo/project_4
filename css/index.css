@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+  z-index: 100;
+}
+header .header_wrap {
+  margin: 0 auto;
+  width: 97%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_wrap .logo > img {
+  width: 56px;
+  height: 24px;
+  cursor: pointer;
+}
+header .header_wrap .menu {
+  display: flex;
+  align-items: center;
+}
+header .header_wrap .menu ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header .header_wrap .menu ul li a {
+  font-family: "SpoqaHanSansNeo";
+  padding: 20px 24px;
+}
+header .header_wrap .menu button {
+  background-color: #333;
+  border-radius: 100px;
+  color: #fff;
+  border: none;
+  padding: 7px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.on_bt {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 450px;
+  width: 90%;
+}
+.on_bt button {
+  border-radius: 100px;
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: -1px;
+}
+.on_bt button b {
+  font-weight: 700;
+}
+
+.slider {
+  width: 100%;
+  height: 820px;
+  background: linear-gradient(#f8faff 67.5%, #f0f4ff 0);
+}
+.slider .slider_wrap {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url(../img/sliderbg.png);
+  background-size: 765px;
+  background-repeat: no-repeat;
+  background-position: 96% 55%;
+}
+
+.book_slide {
+  width: 100%;
+}
+.book_slide .slide_wrap {
+  width: 97%;
+}
+.book_slide .slide_wrap .slide_text {
+  text-align: center;
+}
+.book_slide .slide_wrap .slide_text h2 {
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  font-family: "SpoqaHanSansNeo";
+}
