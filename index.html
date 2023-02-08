@@ -10,6 +10,9 @@
 
     <title>밀리의 서재</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+
+    </script>
 </head>
 
 <body>
@@ -48,10 +51,10 @@
         <div class="slider_wrap">
             <div class="slider_text">
                 <div>
-                    <h1></h1>
+                    <h1 id="title1"></h1>
                 </div>
                 <div>
-                    <h2></h2>
+                    <h2 id="title2"></h2>
                 </div>
             </div>
         </div>
@@ -281,23 +284,40 @@
             </div>
             <div class="price_box_wrap">
                 <div class="price_box1">
-                    <div>
+                    <div class="box1_all">
                         <h5>전자책 정기구독</h5>
-                        <span>월</span><strong>9,900</strong><b>원</b><br>
-                        <s>118,000</s>
-                        <img src="img/sale1.png" alt="sale1">
-                        <span>연</span><strong>99,000</strong><b>원</b>
-                        <h6>밀리에서 제공하는 콘텐츠를 무제한으로</h6>
+                        <div>
+                            <span>월</span><strong>9,900</strong><b>원</b>
+                        </div>
+                        <div class="indent">
+                            <s>118,000</s>
+                            <img src="img/sale1.png" alt="sale1">
+                        </div>
+                        <div>
+                            <span>연</span><strong>99,000</strong><b>원</b>
+                        </div>
+                        <div>
+                            <h6>밀리에서 제공하는 콘텐츠를 무제한으로</h6>
+                        </div>        
                     </div>
-                    <div>
+                    <div class="box1_all">
                         <h5>종이책 정기구독</h5>
-                        <span>월</span><strong>15,900</strong><b>원</b><br>
-                        <s>202,800</s>
+                        <div>
+                            <span>월</span><strong>15,900</strong><b>원</b>
+                        </div>
+                        <div class="indent">
+                            <s>202,800</s>
                         <img src="img/sale2.png" alt="sale2">
-                        <span>연</span><strong>183,000</strong><b>원</b>
-                        <h6>밀리의 모든 콘텐츠를 무제한으로 보고<br>
-                            2달에 1번 종이책+전자책 배송까지
-                        </h6>
+                        </div>
+                        <div>
+                            <span>연</span><strong>183,000</strong><b>원</b>
+                        </div>
+                        <div>
+                            <h6>밀리의 모든 콘텐츠를 무제한으로 보고<br>
+                                2달에 1번 종이책+전자책 배송까지
+                            </h6>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="price_box2">
@@ -311,6 +331,9 @@
                                 금액이 청구되지 않아요
                             </li>
                         </ul>
+                    </div>
+                    <div class="linebox">
+                        <span></span>
                     </div>
                     <div>
                         <ul>
@@ -328,7 +351,28 @@
         </div>
     </section>
 
+    <!-- 오디오북 구좌 -->
+    <section class="audio_book">
+        <div class="head">
+            <ul>
+                <li class="audio_on">
+                    <img src="img/audio.png" alt="오디오북">
+                    <span>오디오북</span>
+                </li>
+                <li>
+                    <img src="img/audio2.png" alt="밀리뷰어">
+                    <span>밀리 뷰어</span>
+                </li>
+            </ul>
+        </div>
+        <div class="audio_wrap">
+            
+        </div>
+    </section>
 
+
+    <script src="js/index.js"></script>
 </body>
+
 
 </html>
