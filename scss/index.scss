@@ -80,6 +80,7 @@ header {
     transform: translateX(-50%);
     max-width: 450px;
     width: 90%;
+    z-index: 100;
     button {
         border-radius: 100px;
         background-color: #333;
@@ -190,6 +191,8 @@ header {
 // 영상 구좌
 .video {
     width: 100%;
+    padding: 80px 0;
+    background-color: #f7f7f7;
     .video_wrap {
         .video_text_wrap {
             text-align: center;
@@ -204,6 +207,253 @@ header {
             max-width: 730px;
             height: 410px;
             margin: 45px auto;
+
+            // iframe::after {
+            //     content: "";
+            //     background-image: url(../img/ab-thumbnail.ea430f48721f82fd88627bc905f9ee8a.jpg);
+            // }
         }
     }
 }
+
+// 배스트 셀러 구좌
+.best_seller {
+    width: 100%;
+    padding: 80px 0;
+
+    .best_seller_wrap {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+
+        .best_seller_text {
+            h2 {
+                @include title_font
+            }
+            p {
+                @include sub_font
+            }
+        }
+
+        .best_seller_all {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .best_seller_title {
+                width: 100%;
+                text-align: left;
+
+                h5{
+                    font-size: 20px;
+                }
+            }
+
+            .cover_wrap
+            {
+                background-color: gold;
+                width: 145px;
+
+                .cover {
+                    width: 100%;
+                    height: 210px;
+                }
+
+                .book_info {
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+
+// 관심분야 구좌
+.pick_on {
+    background-color: #333;
+    color: #fff;
+}
+.pick {
+    width: 100%;
+    padding: 80px 0;
+
+    .pick_wrap {
+        width: 1200px;
+        margin: 0 auto;
+
+        .pick_text {
+            text-align: center;
+
+            h2 {
+                @include title_font
+            }
+            p {
+                @include sub_font
+            }
+        }
+
+        .pick_btn {
+            margin-top: 45px;
+            ul {
+                width: 32%;
+                display: flex;
+                justify-content: space-evenly;
+                
+                li {
+                    border: 1px solid #333;
+                    border-radius: 100px;
+                    padding: 3.5px 15px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// 핸드폰 이미지 구좌
+.phone {
+    width: 100%;
+    padding-top: 80px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    .phone_wrap {
+        width: 1200px;
+        margin: 0 auto;
+
+        .phone_text {
+            text-align: center;
+            h2 {
+                @include title_font
+            }
+            p {
+                @include sub_font
+            }
+        }
+
+        .phone_img_wrap {
+            width: 100%;
+            height: 500px;
+            margin-top: 45px;
+
+            .center {
+                height: 100%;
+                position: relative;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                
+                .tooltip {
+                    width: 420px;
+                    height: 250px;
+                    background-image: url(../img/phone_pick_tooltip.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    position: absolute;
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .tip {
+                    width: 172px;
+                    height: 172px;
+                    position: absolute;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .tip1 {
+                    top: 12%;
+                    left: 15%;
+                }
+                .tip2 {
+                    bottom: 12%;
+                    left: 10%;
+                }
+                .tip3 {
+                    top: 12%;
+                    right: 15%
+                }
+                .tip4 {
+                    bottom: 12%;
+                    right: 10%;
+                }
+
+            }
+        }
+    }
+}
+
+// 요금제 구좌
+.price {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #ffeb60;
+
+    .price_wrap {
+        width: 1200px;
+        margin: 0 auto;
+
+        .price_text {
+            text-align: center;
+
+            h2 {
+                @include title_font
+            }
+            p {
+                @include sub_font
+            }
+        }
+
+        .price_box_wrap {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 45px;
+
+            .price_box1 {
+                width: 750px;
+                display: flex;
+                justify-content: space-evenly;
+
+                div {
+                    width: 327px;
+                    height: 310px;
+                    border-radius: 50px;
+                    background-color: #fff;
+
+                    img {
+                        width: 57px;
+                    }
+
+                    h5 {
+                        
+                    }
+                }
+            }
+            
+            .price_box2 {
+                display: flex;
+                flex-wrap: wrap;
+                div {
+                    width: 100%;
+
+                    ul {
+
+                        li {
+
+                            img {
+                                width: 72px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

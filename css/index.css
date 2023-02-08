@@ -68,6 +68,7 @@ header .header_wrap .menu button {
   transform: translateX(-50%);
   max-width: 450px;
   width: 90%;
+  z-index: 100;
 }
 .on_bt button {
   border-radius: 100px;
@@ -118,15 +119,6 @@ header .header_wrap .menu button {
   margin-top: 310px;
 }
 
-@-webkit-keyframes bookslide {
-  0% {
-    background-position: 0;
-  }
-  100% {
-    background-position: -3000px;
-  }
-}
-
 @keyframes bookslide {
   0% {
     background-position: 0;
@@ -171,8 +163,7 @@ header .header_wrap .menu button {
 }
 .book_slide .book_slide_wrap .book_slide_img .slide1 {
   background: url(../img/slide01.a7cc998bd9e966d0d94956bef997e0c8.png) repeat-x;
-  -webkit-animation: bookslide 70s linear infinite;
-          animation: bookslide 70s linear infinite;
+  animation: bookslide 70s linear infinite;
 }
 .book_slide .book_slide_wrap .book_slide_img .slide2 {
   background: url(../img/slide02.49dff390b1caebf4be084582e573d26f.png) repeat-x;
@@ -180,12 +171,13 @@ header .header_wrap .menu button {
 }
 .book_slide .book_slide_wrap .book_slide_img .slide3 {
   background: url(../img/slide03.2246c95c20916dc665da8a84af1cd2ad.png) repeat-x;
-  -webkit-animation: bookslide 70s linear infinite;
-          animation: bookslide 70s linear infinite;
+  animation: bookslide 70s linear infinite;
 }
 
 .video {
   width: 100%;
+  padding: 80px 0;
+  background-color: #f7f7f7;
 }
 .video .video_wrap .video_text_wrap {
   text-align: center;
@@ -209,4 +201,237 @@ header .header_wrap .menu button {
   max-width: 730px;
   height: 410px;
   margin: 45px auto;
+}
+
+.best_seller {
+  width: 100%;
+  padding: 80px 0;
+}
+.best_seller .best_seller_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.best_seller .best_seller_wrap .best_seller_text h2 {
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.best_seller .best_seller_wrap .best_seller_text p {
+  font-size: 22px;
+  line-height: 160%;
+  letter-spacing: -0.6px;
+  color: #555;
+}
+.best_seller .best_seller_wrap .best_seller_all {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.best_seller .best_seller_wrap .best_seller_all .best_seller_title {
+  width: 100%;
+  text-align: left;
+}
+.best_seller .best_seller_wrap .best_seller_all .best_seller_title h5 {
+  font-size: 20px;
+}
+.best_seller .best_seller_wrap .best_seller_all .cover_wrap {
+  background-color: gold;
+  width: 145px;
+}
+.best_seller .best_seller_wrap .best_seller_all .cover_wrap .cover {
+  width: 100%;
+  height: 210px;
+}
+.best_seller .best_seller_wrap .best_seller_all .cover_wrap .book_info {
+  width: 100%;
+  height: 100px;
+}
+
+.pick_on {
+  background-color: #333;
+  color: #fff;
+}
+
+.pick {
+  width: 100%;
+  padding: 80px 0;
+}
+.pick .pick_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.pick .pick_wrap .pick_text {
+  text-align: center;
+}
+.pick .pick_wrap .pick_text h2 {
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.pick .pick_wrap .pick_text p {
+  font-size: 22px;
+  line-height: 160%;
+  letter-spacing: -0.6px;
+  color: #555;
+}
+.pick .pick_wrap .pick_btn {
+  margin-top: 45px;
+}
+.pick .pick_wrap .pick_btn ul {
+  width: 32%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pick .pick_wrap .pick_btn ul li {
+  border: 1px solid #333;
+  border-radius: 100px;
+  padding: 3.5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.phone {
+  width: 100%;
+  padding-top: 80px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+.phone .phone_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.phone .phone_wrap .phone_text {
+  text-align: center;
+}
+.phone .phone_wrap .phone_text h2 {
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.phone .phone_wrap .phone_text p {
+  font-size: 22px;
+  line-height: 160%;
+  letter-spacing: -0.6px;
+  color: #555;
+}
+.phone .phone_wrap .phone_img_wrap {
+  width: 100%;
+  height: 500px;
+  margin-top: 45px;
+}
+.phone .phone_wrap .phone_img_wrap .center {
+  height: 100%;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.phone .phone_wrap .phone_img_wrap .center .tooltip {
+  width: 420px;
+  height: 250px;
+  background-image: url(../img/phone_pick_tooltip.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.phone .phone_wrap .phone_img_wrap .center .tip {
+  width: 172px;
+  height: 172px;
+  position: absolute;
+}
+.phone .phone_wrap .phone_img_wrap .center .tip img {
+  width: 100%;
+}
+.phone .phone_wrap .phone_img_wrap .center .tip1 {
+  top: 12%;
+  left: 15%;
+}
+.phone .phone_wrap .phone_img_wrap .center .tip2 {
+  bottom: 12%;
+  left: 10%;
+}
+.phone .phone_wrap .phone_img_wrap .center .tip3 {
+  top: 12%;
+  right: 15%;
+}
+.phone .phone_wrap .phone_img_wrap .center .tip4 {
+  bottom: 12%;
+  right: 10%;
+}
+
+.price {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #ffeb60;
+}
+.price .price_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.price .price_wrap .price_text {
+  text-align: center;
+}
+.price .price_wrap .price_text h2 {
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.price .price_wrap .price_text p {
+  font-size: 22px;
+  line-height: 160%;
+  letter-spacing: -0.6px;
+  color: #555;
+}
+.price .price_wrap .price_box_wrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 45px;
+}
+.price .price_wrap .price_box_wrap .price_box1 {
+  width: 750px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.price .price_wrap .price_box_wrap .price_box1 div {
+  width: 327px;
+  height: 310px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.price .price_wrap .price_box_wrap .price_box1 div img {
+  width: 57px;
+}
+.price .price_wrap .price_box_wrap .price_box2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.price .price_wrap .price_box_wrap .price_box2 div {
+  width: 100%;
+}
+.price .price_wrap .price_box_wrap .price_box2 div ul li img {
+  width: 72px;
 }
