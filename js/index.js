@@ -39,4 +39,18 @@ document.getElementsByClassName("view_thumbnail")[0].onclick = function(){
     this.style.display = "none";
 }
 
+// 큐앤에이 구좌
+$(".qna_box").click(function(){
+    $(this).children(".qna_sub").slideToggle(100,function(){
+        $(this).toggleClass("qna_on");
+    });
+    
+    // 화살표
+    if( $(".qna_sub").hasClass("qna_on") == true ){
+        $(this).find("img").attr("src","img/down.ad6759519210e8ae0cf9c13157ede6b7.png");
+    }else{
+        $(this).find("img").attr("src","img/up.a3240ab0ff41a500d14dcd11eef4de8e.png");
+    } 
+});
+
 

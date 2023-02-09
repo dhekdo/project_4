@@ -552,6 +552,10 @@ header {
 }
 
 // 오디오북 구좌
+.audiomillie_on {
+    background-color: #333;
+    color: #fff;
+}
 .audio_on {
     background-color: #f7f7f7;
 }
@@ -772,6 +776,9 @@ header {
 }
 
 // 큐앤에이 구좌
+.qna_on {
+    display: block;
+}
 .qna {
     width: 100%;
     padding: 80px 0;
@@ -784,8 +791,140 @@ header {
 
         .qna_text {
             text-align: center;
+            padding-bottom: 80px;
             h2 {
-                @include title_font
+                @include title_font;
+                margin-bottom: 0;
+            }
+        }
+
+        .qna_box_wrap {
+            width: 80%;
+            margin: 0 auto;
+
+            .qna_box {
+                background-color: #fff;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 25px;
+                margin-bottom: 20px;
+                box-shadow: 10px 10px 30px rgb(0 0 0 / 10%);
+                cursor: pointer;
+                position: relative;
+
+                .qna_title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: -.6px;
+                    }
+                    div {
+
+                        img {
+                            width: 24px;
+                        }
+                    }
+                }
+
+                .qna_sub {
+                    border-top: 1px solid black;
+                    margin-top: 15px;
+                    display: none;
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: -.6px;
+                        color: #555;
+                        padding-top: 16px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+// 푸터
+footer {
+    width: 100%;
+    padding: 20px 0 80px;
+    
+    .footer_wrap {
+        width: 1200px;
+        margin: 0 auto;
+
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                display: flex;
+
+                li {
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                    img {
+                        width: 24px;
+                    }
+                }
+            }
+        }
+
+        .second {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            
+            a {
+                    color: #a5a5a5;
+                    font-size: 10px;
+            }
+            img {
+                width: 12px;
+            }
+        }
+
+        .middle {
+            margin: 20px 0;
+
+            ul {
+                display: flex;
+
+                li {
+                    margin-right: 10px;
+                    &::after {
+                        content: " >";
+                        font-size: 12px;
+                        color: #6f6f6f;
+
+                    }
+
+                    .bold_text {
+                        font-weight: bold;
+                    }
+
+                    a {
+                        font-size: 12px;
+                        color: #6f6f6f;
+                    }
+                    
+                }
+            }
+        }
+
+        .foot {
+            span {
+                color: #6f6f6f;
+                font-size: 10px;
             }
         }
     }
