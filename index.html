@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
     <title>밀리의 서재</title>
@@ -93,6 +93,12 @@
                 </p>
             </div>
             <div class="video_img">
+                <div class="video_thumbnail video_click">
+                    <img src="img/ab-thumbnail.ea430f48721f82fd88627bc905f9ee8a.jpg" alt="썸네일">
+                    <div class="video_btn video_click">
+                        <img src="img/play-btn.2793db10c08e75f4d3ea5226f19f650b.png" alt="플레이버튼">
+                    </div>
+                </div>
                 <iframe frameborder="0" allowfullscreen="1"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     title="[오디오 드라마] 왠지 신경 쓰이는 손님이 있다? &quot;어서오세요 휴남동 서점입니다.&quot;- Teaser" width="100%" height="100%"
@@ -107,7 +113,7 @@
     <!-- 베스트 셀러 구좌 -->
     <section class="best_seller">
         <div class="best_seller_wrap">
-            <div class="best_seller_text">
+            <div class="best_seller_text text_up">
                 <h2>
                     싹 다 무제한<br>
                     9,900원
@@ -212,7 +218,7 @@
     <!-- 관심분야 구좌 -->
     <section class="pick">
         <div class="pick_wrap">
-            <div class="pick_text">
+            <div class="pick_text text_up">
                 <h2>
                     관심 분야에 있는 책도<br>
                     딱 골라드려요
@@ -238,7 +244,7 @@
     <!-- 핸드폰 이미지 구좌 -->
     <section class="phone">
         <div class="phone_wrap">
-            <div class="phone_text">
+            <div class="phone_text text_up">
                 <h2>
                     당신이 끝까지 읽을 책을<br>
                     알려주는 완독지수
@@ -272,7 +278,7 @@
     <!-- 요금제 구좌 -->
     <section class="price">
         <div class="price_wrap">
-            <div class="price_text">
+            <div class="price_text text_up">
                 <h2>
                     언제든 해지 가능!<br>
                     첫 달 무료로 가볍게
@@ -352,21 +358,117 @@
     </section>
 
     <!-- 오디오북 구좌 -->
-    <section class="audio_book">
-        <div class="head">
-            <ul>
-                <li class="audio_on">
-                    <img src="img/audio.png" alt="오디오북">
-                    <span>오디오북</span>
-                </li>
-                <li>
-                    <img src="img/audio2.png" alt="밀리뷰어">
-                    <span>밀리 뷰어</span>
-                </li>
-            </ul>
+    <div class="head">
+        <ul class="head_wrap">
+            <li class="audio_b audio_on">
+                <img src="img/audio.png" alt="오디오북">
+                <span>오디오북</span>
+            </li>
+            <li class="millie_b">
+                <img src="img/audio2.png" alt="밀리뷰어">
+                <span>밀리 뷰어</span>
+            </li>
+        </ul>
+    </div>
+    <section class="audiomillie">
+        <div class="audio_book">
+            <div class="audio_wrap">
+                <div class="audio_text_wrap">
+                    <div class="audio_text">
+                        <div>
+                            <img src="img/audiobook-icon.ecfb1fa3014a2e0be79342716dc8a86f.png" alt="오디오북아이콘">
+                        </div>
+                        <h3>오디오북</h3>
+                        <p>세상에서 가장<br>
+                            교양있는 수면제</p>
+                    </div>
+                    <div class="audio_text2">
+                        <h4>
+                            하루의 시작과 마무리를 오디오북과 함께
+                        </h4>
+                        <p>
+                            지하철에서도, 잠들기 전에도 독서하세요
+                        </p>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="audio_img">
+    
+                </div>
+                
+            </div>
         </div>
-        <div class="audio_wrap">
-            
+        <div class="millie_book">
+            <div class="millie_wrap">
+                <div class="millie_text_wrap">
+                    <div class="millie_text">
+                        <div>
+                            <img src="img/viewer-icon.c49e77ea89d398be90db5e66eb316acd.png" alt="밀리뷰어아이콘">
+                        </div>
+                        <h3>밀리 뷰어</h3>
+                        <p>독서를 위한 가장<br>
+                            완벽한 도구</p>
+                    </div>
+                    <div class="millie_text2">
+                        <h4>
+                            시선 추적 기능
+                        </h4>
+                        <p>
+                            눈동자로 페이지를 넘길 수 있어요
+                        </p>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="millie_img">
+    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- 노란 영상 구좌 -->
+    <section class="view">
+        <div class="view_wrap">
+            <div class="view_text text_up">
+                <h2>
+                    내돈내산<br>
+                    밀리 구독 이야기
+                </h2>
+                <p>
+                    패션 브랜드 대표부터<br>
+                    고등학교 교사까지!
+                </p>
+            </div>
+            <div class="view_img">
+                <div class="view_thumbnail">
+                    <img src="img/youtube_poster.7e27bb6646f3d3221f0f351564068ca5 (1).png" alt="썸네일">
+                    <div>
+                        <img src="img/btn-video-play.e80115f69b4cc27b96f0f789f1514203.svg" alt="플레이버튼">
+                    </div>
+                </div>
+                <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="내돈내산! 밀리 구독 후기" width="100%" height="100%" src="https://www.youtube.com/embed/c-XG8k_w1LM?playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.millie.co.kr&amp;widgetid=3" id="widget4" data-gtm-yt-inspected-9643057_1512="true" data-gtm-yt-inspected-9643057_2182="true" data-gtm-yt-inspected-20="true"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="qna">
+        <div class="qna_wrap">
+            <div class="qna_text text_up">
+                <h2>
+                    자주 묻는 질문
+                </h2>
+            </div>
         </div>
     </section>
 
