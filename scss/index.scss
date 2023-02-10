@@ -264,15 +264,18 @@ header {
             }
         }
 
-        .best_seller_all {
+        .seller_all {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            margin-bottom: 45px;
 
-            .best_seller_title {
+            .seller_title {
                 width: 100%;
                 text-align: left;
+                text-indent: 25px;
+                padding: 45px 0;
 
                 h5{
                     font-size: 20px;
@@ -281,17 +284,42 @@ header {
 
             .cover_wrap
             {
-                background-color: gold;
                 width: 145px;
 
                 .cover {
                     width: 100%;
                     height: 210px;
+
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 .book_info {
                     width: 100%;
                     height: 100px;
+
+                    .book_title {
+                        margin-top: 10px;
+                    }
+                    
+                    .person {
+                        font-size: 14px;
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                    .con {
+                        font-size: 14px;
+                        a {
+                            font-size: 14px;
+
+                            &::after {
+                                content: "‥ [더보기]";
+                                font-size: 12px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -306,7 +334,7 @@ header {
 }
 .pick {
     width: 100%;
-    padding: 80px 0;
+    padding: 80px 0 0;
 
     .pick_wrap {
         width: 1200px;
@@ -338,6 +366,11 @@ header {
                     cursor: pointer;
                 }
             }
+        }
+
+        .pick1 {
+            padding: 45px 0;
+
         }
     }
 }

@@ -16,6 +16,106 @@ document.getElementsByClassName("video_click")[0].onclick = function(){
     // document.getElementsByTagName("iframe")[0].contentWindow.postMessage('{"event" : "command", "func" : "playVideo", "args" : ""}', '*');
 }
 
+// 베스트 셀러 구좌 책 정보 불러오기
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "소설", size: 7 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("cover_wrap1");
+
+    for( var i = 0; i < boxs.length; i++ ){
+        
+        $(".cover1").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title1").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
+        $(".person1").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
+        $(".con1").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+    }
+});
+
+// 한달
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "여행", size: 7 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("cover_wrap2");
+
+    for( var i = 0; i < boxs.length; i++ ){
+        
+        $(".cover2").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title2").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
+        $(".person2").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
+        $(".con2").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+    }
+});
+
+// 오디오북
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "잠", size: 7 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("cover_wrap3");
+
+    for( var i = 0; i < boxs.length; i++ ){
+        
+        $(".cover3").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title3").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
+        $(".person3").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
+        $(".con3").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+    }
+});
+
+// 로맨스
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "로맨스", size: 7 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("cover_wrap4");
+
+    for( var i = 0; i < boxs.length; i++ ){
+        
+        $(".cover4").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title4").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
+        $(".person4").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
+        $(".con4").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+    }
+});
+
+
+// 선택 구좌
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "주식", size: 7 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("cover_wrap_pick1");
+
+    for( var i = 0; i < boxs.length; i++ ){
+        
+        $(".cover_pick1").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title_pick1").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
+        $(".person_pick1").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
+        $(".con_pick1").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+    }
+});
 
 // 오디오북 클릭시 메뉴 전환
 // document.getElementsByClassName("head_wrap")[0].children().onclick = function(){
