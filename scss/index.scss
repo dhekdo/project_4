@@ -645,9 +645,11 @@ header {
             margin: 0 auto;
             background-color: #f7f7f7;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
     
             .audio_text_wrap {
-                width: 100%;
+                width: 50%;
                 height: 680px;
                 display: flex;
                 flex-direction: column;
@@ -718,9 +720,11 @@ header {
             width: 1200px;
             margin: 0 auto;
             background-color: #f7f7f7;
+            display: flex;
+            justify-content: space-between;
 
             .millie_text_wrap {
-                width: 100%;
+                width: 50%;
                 height: 680px;
                 display: flex;
                 flex-direction: column;
@@ -768,7 +772,15 @@ header {
                         }
                     }
                 }
+            }
 
+            .millie_img {
+                background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 320px;
+                height: 680px;
+                
             }
         }
     }

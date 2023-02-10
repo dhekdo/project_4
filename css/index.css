@@ -613,9 +613,11 @@ header .header_wrap .menu button {
   margin: 0 auto;
   background-color: #f7f7f7;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .audiomillie .audio_book .audio_wrap .audio_text_wrap {
-  width: 100%;
+  width: 50%;
   height: 680px;
   display: flex;
   flex-direction: column;
@@ -673,9 +675,11 @@ header .header_wrap .menu button {
   width: 1200px;
   margin: 0 auto;
   background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
 }
 .audiomillie .millie_book .millie_wrap .millie_text_wrap {
-  width: 100%;
+  width: 50%;
   height: 680px;
   display: flex;
   flex-direction: column;
@@ -715,6 +719,13 @@ header .header_wrap .menu button {
   border: 1px solid black;
   padding: 0 20px;
   cursor: pointer;
+}
+.audiomillie .millie_book .millie_wrap .millie_img {
+  background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 680px;
 }
 
 .view {
