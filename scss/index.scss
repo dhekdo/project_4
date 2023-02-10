@@ -5,6 +5,12 @@
 
 
 // 헤더
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+  }
 * {
     margin: 0;
     padding: 0;
@@ -638,11 +644,14 @@ header {
             width: 1200px;
             margin: 0 auto;
             background-color: #f7f7f7;
+            display: flex;
     
             .audio_text_wrap {
+                width: 100%;
+                height: 680px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-evenly;
                 
                 .audio_text {
                     h3{
@@ -682,10 +691,18 @@ header {
                             border-radius: 50px;
                             border: 1px solid black;
                             padding: 0 20px;
+                            cursor: pointer;
                         }
                     }
                 }
-    
+            }
+
+            .audio_img {
+                background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 320px;
+                height: 680px;
             }
         }
     
@@ -703,9 +720,11 @@ header {
             background-color: #f7f7f7;
 
             .millie_text_wrap {
+                width: 100%;
+                height: 680px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-evenly;
 
                 .millie_text{
                     h3{
@@ -745,6 +764,7 @@ header {
                             border-radius: 50px;
                             border: 1px solid black;
                             padding: 0 20px;
+                            cursor: pointer;
                         }
                     }
                 }

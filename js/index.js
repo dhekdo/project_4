@@ -13,7 +13,7 @@ window.onload = function(){
 // 썸네일 클릭시 영상 재생
 document.getElementsByClassName("video_click")[0].onclick = function(){
     this.style.display = "none";
-    // document.getElementsByTagName("iframe")[0].contentWindow.postMessage('{"event" : "command", "func" : "playVideo", "args" : ""}', '*');
+    $(".video_img iframe").attr("src", "https://www.youtube.com/embed/u1OVbU4EdwI?playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.millie.co.kr&amp;widgetid=1&autoplay=1&mute=1");
 }
 
 // 베스트 셀러 구좌 책 정보 불러오기
@@ -216,8 +216,13 @@ $.ajax({
 // }
 $(".head_wrap li").click(
     function(){
-        $(this).addClass("audio_on");
-        $(this).siblings().removeClass("audio_on");
+        $(this).addClass("audio_on").siblings().removeClass("audio_on");
+    }
+);
+
+$(".millie_text2 ul li, .audio_text2 ul li").click(
+    function(){
+        $(this).addClass("audiomillie_on").siblings().removeClass("audiomillie_on");
     }
 );
 
@@ -227,9 +232,13 @@ $(".head_wrap li").click(function(){
     $(".audiomillie > div").eq(headIndex).show().siblings().hide();
 });
 
+
+
 // 노란 영상 구좌 영상 클릭시 화면 재생
 document.getElementsByClassName("view_thumbnail")[0].onclick = function(){
     this.style.display = "none";
+    $(".view_img iframe").attr("src", "https://www.youtube.com/embed/c-XG8k_w1LM?playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.millie.co.kr&amp;widgetid=3&autoplay=1&mute=1");
+
 }
 
 // 큐앤에이 구좌
