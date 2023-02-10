@@ -268,13 +268,12 @@ header {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
             margin-bottom: 45px;
 
             .seller_title {
                 width: 100%;
                 text-align: left;
-                text-indent: 25px;
                 padding: 45px 0;
 
                 h5{
@@ -368,10 +367,13 @@ header {
             }
         }
 
-        .pick1 {
-            padding: 45px 0;
+        .pick_all {
+            > div {
+                padding: 45px 0 60px;
 
+            }
         }
+        
     }
 }
 
