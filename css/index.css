@@ -659,29 +659,47 @@ header .header_wrap .menu button {
 .audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text img {
   width: 44px;
 }
-.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 h4 {
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 {
+  position: relative;
+}
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination {
+  position: absolute;
+  bottom: -45px;
+  left: -4px;
+  text-align: left;
+}
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination span {
+  display: inline;
+}
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .audio_text2_box h4 {
   font-weight: 700;
   font-size: 22px;
   line-height: 160%;
 }
-.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 p {
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .audio_text2_box p {
   font-weight: normal;
   font-size: 22px;
   line-height: 160%;
 }
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .audio_text2_box div:not(:first-child) {
+  display: none;
+}
 .audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination-bullet {
-  width: 20px;
+  width: 25px;
   height: 20px;
   text-align: center;
-  line-height: 20px;
-  font-size: 12px;
+  line-height: 0;
+  font-size: 14px;
   color: #000;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  border: 1px solid black;
+  padding: 3px 20px;
+  border-radius: 50px;
 }
 .audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination-bullet-active {
   color: #fff;
-  background: #007aff;
+  background: #333;
 }
 .audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 ul {
   display: flex;
@@ -719,6 +737,7 @@ header .header_wrap .menu button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide img {
   display: block;
@@ -731,10 +750,6 @@ header .header_wrap .menu button {
   display: block;
   width: 100%;
   height: 100%;
-}
-.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-pagination {
-  position: absolute;
-  top: 0;
 }
 .audiomillie .millie_book {
   width: 100%;

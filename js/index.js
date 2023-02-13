@@ -220,17 +220,23 @@ $(".head_wrap li").click(
     }
 );
 
-$(".millie_text2 ul li, .audio_text2 ul li").click(
-    function(){
-        $(this).addClass("audiomillie_on").siblings().removeClass("audiomillie_on");
-    }
-);
-
 $(".head_wrap li").click(function(){
     var headIndex = $(this).index();
 
     $(".audiomillie > div").eq(headIndex).show().siblings().hide();
 });
+
+
+// 오디오북 스와이퍼
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  });
 
 
 
@@ -309,15 +315,6 @@ $(window).scroll(function(){
     }
 });
 
-// 오디오북 스와이퍼
-var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
-      },
-    },
-  });
+
 
 
