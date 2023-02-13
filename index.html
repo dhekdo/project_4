@@ -10,9 +10,10 @@
 
     <title>밀리의 서재</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    </script>
 </head>
 
 <body>
@@ -113,7 +114,7 @@
     <!-- 베스트 셀러 구좌 -->
     <section class="best_seller">
         <div class="best_seller_wrap">
-            <div class="best_seller_text text_up">
+            <div class="best_seller_text best_seller_text1">
                 <h2>
                     싹 다 무제한<br>
                     9,900원
@@ -376,7 +377,7 @@
     <!-- 관심분야 구좌 -->
     <section class="pick best_seller">
         <div class="pick_wrap best_seller_wrap">
-            <div class="pick_text text_up best_seller_text">
+            <div class="pick_text best_seller_text">
                 <h2>
                     관심 분야에 있는 책도<br>
                     딱 골라드려요
@@ -703,7 +704,7 @@
     <!-- 핸드폰 이미지 구좌 -->
     <section class="phone">
         <div class="phone_wrap">
-            <div class="phone_text text_up">
+            <div class="phone_text">
                 <h2>
                     당신이 끝까지 읽을 책을<br>
                     알려주는 완독지수
@@ -737,7 +738,7 @@
     <!-- 요금제 구좌 -->
     <section class="price">
         <div class="price_wrap">
-            <div class="price_text text_up">
+            <div class="price_text">
                 <h2>
                     언제든 해지 가능!<br>
                     첫 달 무료로 가볍게
@@ -850,18 +851,36 @@
                                 지하철에서도, 잠들기 전에도 독서하세요
                             </p>
                         </div>
-                        <ul>
+                        
+                        
+                        <!-- <ul>
                             <li class="audiomillie_on">1</li>
                             <li>2</li>
                             <li>3</li>
                             <li>4</li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
                 <div class="audio_img">
-                    
+                    <img src="img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png" alt="핸드폰">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content04.png?v4" alt="오디오북1">
+                          </div>
+                          <div class="swiper-slide">
+                            <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1" autoplay="autoplay" muted="muted" loop="loop" playsinline></video>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content01.png?v1" alt="오디오북2">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content02.png?v1" alt="오디오북3">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                
             </div>
         </div>
         <div class="millie_book">
@@ -904,7 +923,7 @@
     <!-- 노란 영상 구좌 -->
     <section class="view">
         <div class="view_wrap">
-            <div class="view_text text_up">
+            <div class="view_text">
                 <h2>
                     내돈내산<br>
                     밀리 구독 이야기

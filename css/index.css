@@ -149,6 +149,7 @@ header .header_wrap .menu button {
 }
 .book_slide .book_slide_wrap .book_slide_text {
   text-align: center;
+  margin-top: 20px;
 }
 .book_slide .book_slide_wrap .book_slide_text h2 {
   font-size: 49px;
@@ -158,12 +159,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .book_slide .book_slide_wrap .book_slide_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .book_slide .book_slide_wrap .book_slide_img {
   width: 100%;
@@ -193,6 +196,7 @@ header .header_wrap .menu button {
 }
 .video .video_wrap .video_text_wrap {
   text-align: center;
+  margin-top: 20px;
 }
 .video .video_wrap .video_text_wrap h2 {
   font-size: 49px;
@@ -202,12 +206,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .video .video_wrap .video_text_wrap p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .video .video_wrap .video_img {
   max-width: 730px;
@@ -247,6 +253,9 @@ header .header_wrap .menu button {
   margin: 0 auto;
   text-align: center;
 }
+.best_seller .best_seller_wrap .best_seller_text {
+  margin-top: 20px;
+}
 .best_seller .best_seller_wrap .best_seller_text h2 {
   font-size: 49px;
   font-weight: 700;
@@ -255,12 +264,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .best_seller .best_seller_wrap .best_seller_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .best_seller .best_seller_wrap .seller_all {
   width: 100%;
@@ -326,6 +337,7 @@ header .header_wrap .menu button {
 }
 .pick .pick_wrap .pick_text {
   text-align: center;
+  margin-top: 20px;
 }
 .pick .pick_wrap .pick_text h2 {
   font-size: 49px;
@@ -335,12 +347,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .pick .pick_wrap .pick_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .pick .pick_wrap .pick_btn {
   margin-top: 45px;
@@ -373,6 +387,7 @@ header .header_wrap .menu button {
 }
 .phone .phone_wrap .phone_text {
   text-align: center;
+  margin-top: 20px;
 }
 .phone .phone_wrap .phone_text h2 {
   font-size: 49px;
@@ -382,12 +397,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .phone .phone_wrap .phone_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .phone .phone_wrap .phone_img_wrap {
   width: 100%;
@@ -449,6 +466,7 @@ header .header_wrap .menu button {
 }
 .price .price_wrap .price_text {
   text-align: center;
+  margin-top: 20px;
 }
 .price .price_wrap .price_text h2 {
   font-size: 49px;
@@ -458,12 +476,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .price .price_wrap .price_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .price .price_wrap .price_box_wrap {
   width: 100%;
@@ -649,6 +669,20 @@ header .header_wrap .menu button {
   font-size: 22px;
   line-height: 160%;
 }
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
 .audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 ul {
   display: flex;
 }
@@ -659,11 +693,48 @@ header .header_wrap .menu button {
   cursor: pointer;
 }
 .audiomillie .audio_book .audio_wrap .audio_img {
-  background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 320px;
   height: 680px;
+  position: relative;
+  overflow: hidden;
+}
+.audiomillie .audio_book .audio_wrap .audio_img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+.audiomillie .audio_book .audio_wrap .audio_img .swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 80px;
+}
+.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-pagination {
+  position: absolute;
+  top: 0;
 }
 .audiomillie .millie_book {
   width: 100%;
@@ -744,6 +815,7 @@ header .header_wrap .menu button {
   position: absolute;
   top: 80px;
   right: 350px;
+  margin-top: 20px;
 }
 .view .view_wrap .view_text h2 {
   font-size: 49px;
@@ -753,12 +825,14 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
 }
 .view .view_wrap .view_text p {
   font-size: 22px;
   line-height: 160%;
   letter-spacing: -0.6px;
   color: #555;
+  opacity: 0;
 }
 .view .view_wrap .view_img {
   width: 415px;
@@ -811,7 +885,9 @@ header .header_wrap .menu button {
   letter-spacing: -0.01em;
   color: #242424;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  opacity: 0;
   margin-bottom: 0;
+  opacity: 1;
 }
 .qna .qna_wrap .qna_box_wrap {
   width: 80%;

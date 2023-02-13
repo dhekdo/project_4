@@ -10,6 +10,7 @@ $de_font : 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: -0.01em;
     color: #242424;
     font-family: $de_font;
+    opacity: 0;
 }
 
 @mixin sub_font {
@@ -17,4 +18,5 @@ $de_font : 'Spoqa Han Sans Neo', 'sans-serif';
     line-height: 160%;
     letter-spacing: -0.6px;
     color: #555;
+    opacity: 0;
 }

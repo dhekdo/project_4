@@ -6,7 +6,7 @@ window.onload = function(){
     mainTitle.setAttribute("style", "transform: translateY(-100px); transition : all 1.5s; opacity : 1");
     setTimeout(function(){
         subTitle.setAttribute("style", "transform: translateY(-50px); transition : all 1s; opacity : 1");
-    },500);
+    },500); 
 }
 
 
@@ -254,5 +254,70 @@ $(".qna_box").click(function(){
         $(this).find("img").attr("src","img/up.a3240ab0ff41a500d14dcd11eef4de8e.png");
     } 
 });
+
+// 스크롤 이벤트
+$(window).scroll(function(){
+    var ws = $(this).scrollTop();
+
+    if( ws > $(".book_slide").offset().top - 600 ){
+        $(".book_slide_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".book_slide_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".video_text_wrap").offset().top - 600 ){
+        $(".video_text_wrap").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".video_text_wrap").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".best_seller_text1").offset().top - 600 ){
+        $(".best_seller_text1").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".best_seller_text1").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".pick_text").offset().top - 600 ){
+        $(".pick_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".pick_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".phone_text").offset().top - 600 ){
+        $(".phone_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".phone_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".price_text").offset().top - 600 ){
+        $(".price_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".price_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".view_text").offset().top - 600 ){
+        $(".view_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+    }
+    else {
+        $(".view_textt").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+});
+
+// 오디오북 스와이퍼
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  });
 
 
