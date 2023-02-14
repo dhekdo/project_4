@@ -1,0 +1,69 @@
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #242424;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+  z-index: 100;
+  opacity: 0.8;
+}
+header .header_wrap {
+  margin: 0 auto;
+  width: 97%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_wrap .logo > img {
+  width: 56px;
+  height: 24px;
+  cursor: pointer;
+}
+header .header_wrap .menu {
+  display: flex;
+  align-items: center;
+}
+header .header_wrap .menu ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header .header_wrap .menu ul li a {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  padding: 20px 24px;
+}
+header .header_wrap .menu button {
+  background-color: #333;
+  border-radius: 100px;
+  color: #fff;
+  border: none;
+  padding: 7px 24px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 24px;
+}

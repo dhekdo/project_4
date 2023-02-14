@@ -709,7 +709,6 @@ header .header_wrap .menu button {
   background-color: #f7f7f7;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .audiomillie .audio_book .audio_wrap .audio_text_wrap {
   width: 50%;
