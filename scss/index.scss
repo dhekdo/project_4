@@ -290,9 +290,9 @@ header {
                 }
             }
 
-            .cover_wrap
-            {
+            .cover_wrap {
                 width: 145px;
+                text-align: left;
 
                 .cover {
                     width: 100%;
@@ -303,6 +303,46 @@ header {
                     }
                 }
 
+                .cover1 {
+                    position: relative;
+                    
+                    .wan {
+                        position: absolute;
+                        top: 25px;
+                        right: -5px;
+                        width: 40px;
+                        height: 35px;
+                    }
+
+                    .mp {
+                        position: absolute;
+                        top: 0;
+                        right: -5px;
+                        width: 40px;
+                        height: 35px;
+                    }
+                }
+
+                .cover3 {
+                    position: relative;
+                    
+                    .wan {
+                        position: absolute;
+                        top: 25px;
+                        right: -5px;
+                        width: 40px;
+                        height: 35px;
+                    }
+
+                    .mp {
+                        position: absolute;
+                        top: 0;
+                        right: -5px;
+                        width: 40px;
+                        height: 35px;
+                    }
+                }
+
                 .book_info {
                     width: 100%;
                     height: 100px;
@@ -310,17 +350,40 @@ header {
                     .book_title {
                         margin-top: 10px;
                     }
+
+                    .book_title1 {
+
+                        img {
+                            display: block;
+                            width: 38px;
+                            height: 18px;
+                            margin: 5px 0;
+                        }
+                    }
+
+                    .book_title3 {
+
+                        img {
+                            display: block;
+                            width: 38px;
+                            height: 18px;
+                            margin: 5px 0;
+                        }
+                    }
                     
                     .person {
                         font-size: 14px;
+
                         a {
                             font-size: 14px;
                         }
                     }
                     .con {
                         font-size: 14px;
+
                         a {
                             font-size: 14px;
+
 
                             &::after {
                                 content: "‥ [더보기]";
@@ -388,6 +451,31 @@ header {
 }
 
 // 핸드폰 이미지 구좌
+@keyframes phoneUp {
+    0% {
+        transform: translateY(40px) scale(0.9);
+    }
+    80% {
+        transform: translateY(6px) scale(1.06);
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.phoneUp_on1 {
+    animation: phoneUp 0.6s 1;
+}
+.phoneUp_on2 {
+    animation: phoneUp 0.7s 1;
+}
+.phoneUp_on3 {
+    animation: phoneUp 0.8s 1;
+}
+.phoneUp_on4 {
+    animation: phoneUp 0.5s 1;
+}
+
 .phone {
     width: 100%;
     padding-top: 80px;
@@ -437,25 +525,31 @@ header {
                     width: 172px;
                     height: 172px;
                     position: absolute;
+
                     img {
                         width: 100%;
+                        opacity: 0;
                     }
                 }
                 .tip1 {
                     top: 12%;
                     left: 15%;
+
                 }
                 .tip2 {
                     bottom: 12%;
                     left: 10%;
+
                 }
                 .tip3 {
                     top: 12%;
-                    right: 15%
+                    right: 15%;
+
                 }
                 .tip4 {
                     bottom: 12%;
                     right: 10%;
+
                 }
 
             }
@@ -471,7 +565,7 @@ header {
 
     .price_wrap {
         width: 1200px;
-        margin: 0 auto;
+        margin: 45px auto;
 
         .price_text {
             text-align: center;
@@ -644,7 +738,7 @@ header {
 .audiomillie {
     .audio_book {
         width: 100%;
-        padding: 80px 0;
+        padding: 80px 0 120px;
         background-color: #f7f7f7;
         
         .audio_wrap {
@@ -734,16 +828,16 @@ header {
                         background: #333;
                       }
     
-                    ul {
-                        display: flex;
+                    // ul {
+                    //     display: flex;
     
-                        li {
-                            border-radius: 50px;
-                            border: 1px solid black;
-                            padding: 0 20px;
-                            cursor: pointer;
-                        }
-                    }
+                    //     li {
+                    //         border-radius: 50px;
+                    //         border: 1px solid black;
+                    //         padding: 0 20px;
+                    //         cursor: pointer;
+                    //     }
+                    // }
                 }
             }
 
@@ -752,6 +846,9 @@ header {
                 height: 680px;
                 position: relative;
                 overflow: hidden;
+                border-radius: 50px;
+                // box-shadow: 10px 10px 10px rgb(224, 224, 224);
+                margin-top: 60px;
 
                 img {
                     position: relative;
@@ -759,6 +856,7 @@ header {
                     height: 100%;
                     z-index: 100;
                     pointer-events: none;
+                    margin-top: 60px;
                 }
 
                 .swiper {
@@ -767,6 +865,7 @@ header {
                     position: absolute;
                     top: 0;
                     border-radius: 80px;
+                    margin-top: 60px;
 
                     .swiper-slide {
                         text-align: center;
@@ -775,19 +874,19 @@ header {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        cursor: pointer;
+                        cursor: grab;
 
                         img {
                             display: block;
-                            width: 100%;
-                            height: 100%;
+                            width: 99%;
+                            height: 105%;
                             object-fit: cover;
                           }
 
                         video {
                             display: block;
                             width: 100%;
-                            height: 100%;
+                            height: 95.5%;
                         }
                     }
                 }
@@ -800,7 +899,7 @@ header {
 
     .millie_book {
         width: 100%;
-        padding: 80px 0;
+        padding: 80px 0 120px;
         background-color: #f7f7f7;
         display: none;
         
@@ -838,37 +937,113 @@ header {
                 }
 
                 .millie_text2 {
-                    h4 {
-                        font-weight: 700;
-                        font-size: 22px;
-                        line-height: 160%;
+                    position: relative;
+
+                    .swiper-pagination2 {
+                        position: absolute;
+                        bottom: -45px;
+                        left: -4px;
+                        text-align: left;
+
+                        span {
+                            display: inline;
+                        }
+                        
                     }
-                    p {
-                        font-weight: normal;
-                        font-size: 22px;
-                        line-height: 160%;
-                    }
-    
-                    ul {
-                        display: flex;
-    
-                        li {
-                            border-radius: 50px;
-                            border: 1px solid black;
-                            padding: 0 20px;
-                            cursor: pointer;
+
+                    .millie_text2_box {
+                        h4 {
+                            font-weight: 700;
+                            font-size: 22px;
+                            line-height: 160%;
+                        }
+                        p {
+                            font-weight: normal;
+                            font-size: 22px;
+                            line-height: 160%;
+                        }
+
+                        div {
+                            &:not(:first-child) {
+                                display: none;
+                            }
                         }
                     }
+
+                    .swiper-pagination-bullet {
+                        width: 25px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 0;
+                        font-size: 14px;
+                        color: #000;
+                        opacity: 1;
+                        background-color: #f7f7f7;
+                        border: 1px solid black;
+                        padding: 3px 20px;
+                        border-radius: 50px;
+                      }
+
+                      .swiper-pagination-bullet-active {
+                        color: #fff;
+                        background: #333;
+                      }    
                 }
             }
 
             .millie_img {
-                background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
-                background-size: 100%;
-                background-repeat: no-repeat;
                 width: 320px;
                 height: 680px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50px;
+                // box-shadow: 10px 10px 10px rgb(224, 224, 224);
+                margin-top: 60px;
                 
+                
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 100;
+                    pointer-events: none;
+                    margin-top: 60px;
+                }
+
+                .mySwiper2 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    border-radius: 80px;
+                    margin-top: 60px;
+
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        background: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: grab;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            
+                          }
+
+                        video {
+                            display: block;
+                            width: 100%;
+                            height: 95.5%;
+                        }
+                    }
+                }
+
+
             }
         }
     }

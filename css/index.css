@@ -290,6 +290,7 @@ header .header_wrap .menu button {
 }
 .best_seller .best_seller_wrap .seller_all .cover_wrap {
   width: 145px;
+  text-align: left;
 }
 .best_seller .best_seller_wrap .seller_all .cover_wrap .cover {
   width: 100%;
@@ -298,12 +299,58 @@ header .header_wrap .menu button {
 .best_seller .best_seller_wrap .seller_all .cover_wrap .cover img {
   width: 100%;
 }
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover1 {
+  position: relative;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover1 .wan {
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  width: 40px;
+  height: 35px;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover1 .mp {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 40px;
+  height: 35px;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover3 {
+  position: relative;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover3 .wan {
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  width: 40px;
+  height: 35px;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .cover3 .mp {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 40px;
+  height: 35px;
+}
 .best_seller .best_seller_wrap .seller_all .cover_wrap .book_info {
   width: 100%;
   height: 100px;
 }
 .best_seller .best_seller_wrap .seller_all .cover_wrap .book_info .book_title {
   margin-top: 10px;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .book_info .book_title1 img {
+  display: block;
+  width: 38px;
+  height: 18px;
+  margin: 5px 0;
+}
+.best_seller .best_seller_wrap .seller_all .cover_wrap .book_info .book_title3 img {
+  display: block;
+  width: 38px;
+  height: 18px;
+  margin: 5px 0;
 }
 .best_seller .best_seller_wrap .seller_all .cover_wrap .book_info .person {
   font-size: 14px;
@@ -375,6 +422,33 @@ header .header_wrap .menu button {
   padding: 45px 0 60px;
 }
 
+@keyframes phoneUp {
+  0% {
+    transform: translateY(40px) scale(0.9);
+  }
+  80% {
+    transform: translateY(6px) scale(1.06);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+.phoneUp_on1 {
+  animation: phoneUp 0.6s 1;
+}
+
+.phoneUp_on2 {
+  animation: phoneUp 0.7s 1;
+}
+
+.phoneUp_on3 {
+  animation: phoneUp 0.8s 1;
+}
+
+.phoneUp_on4 {
+  animation: phoneUp 0.5s 1;
+}
+
 .phone {
   width: 100%;
   padding-top: 80px;
@@ -437,6 +511,7 @@ header .header_wrap .menu button {
 }
 .phone .phone_wrap .phone_img_wrap .center .tip img {
   width: 100%;
+  opacity: 0;
 }
 .phone .phone_wrap .phone_img_wrap .center .tip1 {
   top: 12%;
@@ -462,7 +537,7 @@ header .header_wrap .menu button {
 }
 .price .price_wrap {
   width: 1200px;
-  margin: 0 auto;
+  margin: 45px auto;
 }
 .price .price_wrap .price_text {
   text-align: center;
@@ -625,7 +700,7 @@ header .header_wrap .menu button {
 
 .audiomillie .audio_book {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 120px;
   background-color: #f7f7f7;
 }
 .audiomillie .audio_book .audio_wrap {
@@ -701,20 +776,13 @@ header .header_wrap .menu button {
   color: #fff;
   background: #333;
 }
-.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 ul {
-  display: flex;
-}
-.audiomillie .audio_book .audio_wrap .audio_text_wrap .audio_text2 ul li {
-  border-radius: 50px;
-  border: 1px solid black;
-  padding: 0 20px;
-  cursor: pointer;
-}
 .audiomillie .audio_book .audio_wrap .audio_img {
   width: 320px;
   height: 680px;
   position: relative;
   overflow: hidden;
+  border-radius: 50px;
+  margin-top: 60px;
 }
 .audiomillie .audio_book .audio_wrap .audio_img img {
   position: relative;
@@ -722,6 +790,7 @@ header .header_wrap .menu button {
   height: 100%;
   z-index: 100;
   pointer-events: none;
+  margin-top: 60px;
 }
 .audiomillie .audio_book .audio_wrap .audio_img .swiper {
   width: 100%;
@@ -729,6 +798,7 @@ header .header_wrap .menu button {
   position: absolute;
   top: 0;
   border-radius: 80px;
+  margin-top: 60px;
 }
 .audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide {
   text-align: center;
@@ -737,23 +807,23 @@ header .header_wrap .menu button {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: grab;
 }
 .audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 105%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide video {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 95.5%;
 }
 .audiomillie .millie_book {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 120px;
   background-color: #f7f7f7;
   display: none;
 }
@@ -787,31 +857,92 @@ header .header_wrap .menu button {
 .audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text img {
   width: 44px;
 }
-.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 h4 {
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 {
+  position: relative;
+}
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .swiper-pagination2 {
+  position: absolute;
+  bottom: -45px;
+  left: -4px;
+  text-align: left;
+}
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .swiper-pagination2 span {
+  display: inline;
+}
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .millie_text2_box h4 {
   font-weight: 700;
   font-size: 22px;
   line-height: 160%;
 }
-.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 p {
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .millie_text2_box p {
   font-weight: normal;
   font-size: 22px;
   line-height: 160%;
 }
-.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 ul {
-  display: flex;
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .millie_text2_box div:not(:first-child) {
+  display: none;
 }
-.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 ul li {
-  border-radius: 50px;
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .swiper-pagination-bullet {
+  width: 25px;
+  height: 20px;
+  text-align: center;
+  line-height: 0;
+  font-size: 14px;
+  color: #000;
+  opacity: 1;
+  background-color: #f7f7f7;
   border: 1px solid black;
-  padding: 0 20px;
-  cursor: pointer;
+  padding: 3px 20px;
+  border-radius: 50px;
+}
+.audiomillie .millie_book .millie_wrap .millie_text_wrap .millie_text2 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #333;
 }
 .audiomillie .millie_book .millie_wrap .millie_img {
-  background-image: url(../img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 320px;
   height: 680px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-top: 60px;
+}
+.audiomillie .millie_book .millie_wrap .millie_img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+  margin-top: 60px;
+}
+.audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 80px;
+  margin-top: 60px;
+}
+.audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+.audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 .swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 95.5%;
 }
 
 .view {

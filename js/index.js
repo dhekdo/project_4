@@ -33,6 +33,18 @@ $.ajax({
         $(".book_title1").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
         $(".person1").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
         $(".con1").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+
+        // 라벨 삽입
+        if( i == 0 || i == 3 || i == 4  ){
+            $(".cover1").eq(i).prepend("<img src ='img/badge-full.a98c7199ab8829b059a2386c6f91efca.png' class = 'wan'>");
+            $(".cover1").eq(i).prepend("<img src ='img/badge-readingbook.6d3d4deb89226cd278417a183150b386.png' class = 'mp'>");
+            $(".book_title1").eq(i).prepend("<img src ='img/label-mp3.d91abe449f24383648385744bb3c3d5c.svg'>");
+        }
+        else if( i == 6 ){
+            $(".cover1").eq(i).prepend("<img src ='img/badge-full.a98c7199ab8829b059a2386c6f91efca.png' class = 'wan'>");
+            $(".cover1").eq(i).prepend("<img src ='img/badge-readingbook.6d3d4deb89226cd278417a183150b386.png' class = 'mp'>");
+            $(".book_title1").eq(i).prepend("<img src ='img/label-reader.76ca1a707ad27c4f4f1d948a781c8d7f.svg'>");   
+        }
     }
 });
 
@@ -72,7 +84,18 @@ $.ajax({
         $(".cover3").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
         $(".book_title3").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
         $(".person3").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
-        $(".con3").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+        $(".con3").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>");
+        $(".cover3").eq(i).prepend("<img src ='img/badge-full.a98c7199ab8829b059a2386c6f91efca.png' class = 'wan'>");
+            $(".cover3").eq(i).prepend("<img src ='img/badge-readingbook.6d3d4deb89226cd278417a183150b386.png' class = 'mp'>");
+
+        // 라벨 삽입
+        if ( i < 6 ){
+            $(".book_title3").eq(i).prepend("<img src ='img/label-mp3.d91abe449f24383648385744bb3c3d5c.svg'>");
+        }
+        else {
+            $(".book_title3").eq(6).prepend("<img src ='img/label-reader.76ca1a707ad27c4f4f1d948a781c8d7f.svg'>");
+
+        }
     }
 });
 
@@ -209,11 +232,10 @@ $.ajax({
     }
 });
 
+//완독지수 애니메이션
+
 
 // 오디오북 클릭시 메뉴 전환
-// document.getElementsByClassName("head_wrap")[0].children().onclick = function(){
-//     this.classList.toggle("audio_on");
-// }
 $(".head_wrap li").click(
     function(){
         $(this).addClass("audio_on").siblings().removeClass("audio_on");
@@ -222,15 +244,47 @@ $(".head_wrap li").click(
 
 $(".head_wrap li").click(function(){
     var headIndex = $(this).index();
-
     $(".audiomillie > div").eq(headIndex).show().siblings().hide();
 });
 
+// $(".swiper-pagination1 span").click(function(){
+//     var a = $(".swiper-pagination-bullet-active").index();
+// console.log(a);
+//     $(".audio_text2_box div").eq(a).show();
+// }
+// );
 
 // 오디오북 스와이퍼
 var swiper = new Swiper(".mySwiper", {
+
+    on: {
+        slideChange: function(){
+            var slideIndex = $(".swiper-pagination-bullet-active").index();
+            
+            $(".audio_text2_box div").eq(slideIndex).show().siblings().hide();
+        }
+    },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination1",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  });
+
+  var swiper2 = new Swiper(".mySwiper2", {
+
+    on: {
+        slideChange: function(){
+            var slideIndex2 = $(".swiper-pagination2 .swiper-pagination-bullet-active").index();
+            console.log(slideIndex2);
+            
+            $(".millie_text2_box div").eq(slideIndex2).show().siblings().hide();
+        }
+    },
+    pagination: {
+      el: ".swiper-pagination2",
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
@@ -295,9 +349,17 @@ $(window).scroll(function(){
 
     if( ws > $(".phone_text").offset().top - 600 ){
         $(".phone_text").children().css({"transform":"translateY(-20px)", "opacity" : "1", "transition": "all 2s"});
+        $(".tip1 img").addClass("phoneUp_on1").css({"opacity" : "1"});
+        $(".tip2 img").addClass("phoneUp_on2").css({"opacity" : "1"});
+        $(".tip3 img").addClass("phoneUp_on3").css({"opacity" : "1"});
+        $(".tip4 img").addClass("phoneUp_on4").css({"opacity" : "1"});
     }
     else {
         $(".phone_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+        $(".tip1 img").removeClass("phoneUp_on1").css({"opacity" : "0"});
+        $(".tip2 img").removeClass("phoneUp_on2").css({"opacity" : "0"});
+        $(".tip3 img").removeClass("phoneUp_on3").css({"opacity" : "0"});
+        $(".tip4 img").removeClass("phoneUp_on4").css({"opacity" : "0"});
     }
 
     if( ws > $(".price_text").offset().top - 600 ){
@@ -305,6 +367,34 @@ $(window).scroll(function(){
     }
     else {
         $(".price_text").children().css({"transform":"translateY(0px)", "opacity" : "0", "transition": "all 2s"});
+    }
+
+    if( ws > $(".millie_text, .millie_text > img, .millie_img").offset().top - 600 ){
+        $(".millie_text, .millie_text > img, .millie_img").css({"opacity" : "1"});
+    }
+    else {
+        $(".millie_text, .millie_text > img, .millie_img").css({"opacity" : "0"});
+    }
+
+    if( ws > $(".audio_text, .audio_text > img, .audio_img").offset().top - 600 ){
+        $(".audio_text, .audio_text > img, .audio_img").css({"opacity" : "1"});
+    }
+    else {
+        $(".audio_text, .audio_text > img,  .audio_img").css({"opacity" : "0"});
+    }
+
+    if( ws > $(".millie_text, .millie_img").offset().top - 600 ){
+        $(".millie_text, .millie_img").children().css({"transform":"translateY(-60px)", "transition": "all 1s"});
+    }
+    else {
+        $(".millie_text, .millie_img").children().css({"transform":"translateY(0px)", "transition": "all 2s"});
+    }
+
+    if( ws > $(".audio_text, .audio_img").offset().top - 600 ){
+        $(".audio_text, .audio_img").children().css({"transform":"translateY(-60px)", "transition": "all 1s"});
+    }
+    else {
+        $(".audio_text, .audio_img").children().css({"transform":"translateY(0px)", "transition": "all 2s"});
     }
 
     if( ws > $(".view_text").offset().top - 600 ){
