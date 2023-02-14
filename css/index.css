@@ -808,6 +808,9 @@ header .header_wrap .menu button {
   align-items: center;
   cursor: grab;
 }
+.audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide:active {
+  cursor: grabbing;
+}
 .audiomillie .audio_book .audio_wrap .audio_img .swiper .swiper-slide img {
   display: block;
   width: 99%;
@@ -930,6 +933,9 @@ header .header_wrap .menu button {
   justify-content: center;
   align-items: center;
   cursor: grab;
+}
+.audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 .swiper-slide:active {
+  cursor: grabbing;
 }
 .audiomillie .millie_book .millie_wrap .millie_img .mySwiper2 .swiper-slide img {
   display: block;
