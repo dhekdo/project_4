@@ -147,7 +147,7 @@ header .header_wrap .menu button {
   margin: 10px auto;
   width: 130px;
   height: 40px;
-  border: 2px solid #1f8ce6;
+  border: 1.5px solid #1f8ce6;
   color: #1f8ce6;
   border-radius: 5px;
   text-align: center;
@@ -309,6 +309,81 @@ header .header_wrap .menu button {
   color: #4076b5;
   font-size: 13px;
   cursor: pointer;
+}
+.all .left_zone .content_all .profile .profile_box {
+  padding: 5px 0;
+  margin: 10px 0 30px;
+  border-bottom: 1px solid #d1d5d9;
+}
+.all .left_zone .content_all .profile .profile_box span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808991;
+  margin-right: 15px;
+}
+.all .left_zone .content_all .profile .profile_box span.line {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #808991;
+}
+.all .left_zone .content_all .profile .profile_box_text {
+  padding: 15px 0;
+  border-bottom: 1px solid #d1d5d9;
+}
+.all .left_zone .content_all .profile .profile_box_text b {
+  font-size: 20px;
+}
+.all .left_zone .content_all .profile .profile_box_text div > div {
+  margin: 20px 0;
+  width: 170px;
+  border: 1.5px solid #1f8ce6;
+  border-radius: 5px;
+  text-align: center;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.all .left_zone .content_all .profile .profile_box_text div > div span {
+  color: #1f8ce6;
+  font-weight: 500;
+  font-size: 13px;
+}
+.all .left_zone .content_all .profile .profile_box_text > div > div span:nth-child(1)::before {
+  content: "+";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.all .left_zone .content_all .profile .profile_box_text > div > div span:nth-child(2)::before {
+  content: "·";
+  font-weight: 900;
+}
+.all .left_zone .content_all .profile .profile_box_text > div > span:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808991;
+  margin-right: 15px;
+}
+.all .left_zone .content_all .profile .profile_box_text > div > span:nth-of-type(3) {
+  font-size: 14px;
+  font-weight: 300;
+}
+.all .left_zone .content_all .profile .profile_img > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.all .left_zone .content_all .profile .profile_img > div:nth-child(1) h3 {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+}
+.all .left_zone .content_all .profile .profile_img > div:nth-child(1) ul {
+  display: flex;
+}
+.all .left_zone .content_all .profile .profile_img > div:nth-child(1) ul li {
+  font-size: 11px;
+  margin-left: 10px;
+  color: #999;
 }
 .all .side {
   width: 20%;

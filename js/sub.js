@@ -40,3 +40,6 @@ $(function(){
 });
 
 // 펼쳐보기 버튼
+$(".content_text").click(function(){
+    $(this).addClass("content_on");
+});
