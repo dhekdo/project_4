@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -13,7 +14,9 @@ body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
@@ -68,65 +71,300 @@ header .header_wrap .menu button {
   margin-left: 24px;
 }
 
-.top {
-  width: 100%;
-  padding: 200px 0;
-}
-.top .top_wrap {
+.all {
+  display: flex;
   width: 1200px;
   margin: 0 auto;
+  padding-top: 200px;
 }
-.top .top_wrap .book_cover_all {
-  width: 50%;
+.all .left_zone {
+  width: 80%;
+  border-right: 1px solid #dfdfdf;
+}
+.all .left_zone .top {
+  width: 100%;
+  margin: 0 auto;
+}
+.all .left_zone .top .top_wrap {
+  width: 100%;
+}
+.all .left_zone .top .top_wrap .book_cover_all {
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.top .top_wrap .book_cover_all .book_cover {
-  width: 100%;
-}
-.top .top_wrap .book_cover_all .book_cover .thum {
+.all .left_zone .top .top_wrap .book_cover_all .book_cover {
   width: 200px;
-  height: 302px;
 }
-.top .top_wrap .book_cover_all .book_cover .thum img {
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum {
+  width: 100%;
+  height: 302px;
+  margin: 0 auto;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum img {
   width: 100%;
   cursor: zoom-in;
 }
-.top .top_wrap .book_cover_all .book_cover .thum2 {
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100Vh;
+  margin: 0 auto;
   text-align: center;
-  background-color: #333;
   display: none;
+  z-index: 10;
 }
-.top .top_wrap .book_cover_all .book_cover .thum2 img {
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum2 img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.top .top_wrap .book_cover_all .book_cover .thum2 i {
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum2 i {
   position: absolute;
-  top: 10%;
-  right: 30%;
+  top: 8%;
+  right: 10%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 40px;
   cursor: pointer;
 }
-.top .top_wrap .book_cover_all .book_cover .btn {
-  margin: 10px 0;
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .thum_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  opacity: 0.8;
+  z-index: 0;
+  display: none;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .btn {
+  margin: 10px auto;
   width: 130px;
   height: 40px;
   border: 2px solid #1f8ce6;
   color: #1f8ce6;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   font-weight: 700;
   padding: 10px 10px;
   font-size: 14px;
+  cursor: pointer;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info {
+  width: 68%;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head {
+  margin-bottom: 20px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head h6 {
+  font-size: 12px;
+  font-weight: 300;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head h6 b {
+  font-size: 12px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head h5 {
+  font-size: 13px;
+  color: #666;
+  font-weight: 300;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head .star {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head .star img {
+  width: 70px;
+  height: 14px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head .star span {
+  font-size: 14px;
+  color: #fa722e;
+  padding: 0 5px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .head .star span::after {
+  content: " (1명)";
+  font-size: 12px;
+  color: #666;
+  font-weight: 300;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .foot {
+  border-top: 1px solid #c0c0c0;
+  padding: 20px 0;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .foot table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #e6e8eb;
+  border-bottom: 1px solid #e6e8eb;
+  border-spacing: px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .foot table tr th {
+  width: 30%;
+  background-color: #f7fafc;
+  border-right: 1px solid #e6e8eb;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 20px;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .foot table tr td {
+  font-size: 13px;
+  font-weight: 200;
+  padding: 5px 10px;
+  width: 40%;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d1d5d9;
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div i {
+  display: inline-block;
+  width: 21px;
+  color: #808991;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all .text_icon {
+  color: #fff;
+  background-color: #1f8ce6;
+  flex-grow: 2;
+  font-weight: 500;
+}
+.all .left_zone .top .top_wrap .info_all {
+  width: 80%;
+  margin: 30px auto;
+  border: 3px solid #e6e8eb;
+  padding: 20px;
+  display: flex;
+}
+.all .left_zone .top .top_wrap .info_all ul {
+  width: 50%;
+}
+.all .left_zone .top .top_wrap .info_all ul li b {
+  font-size: 12px;
+  color: #666;
+  margin-right: 10px;
+}
+.all .left_zone .top .top_wrap .info_all ul li span {
+  font-size: 12px;
+  color: #666;
+}
+.all .left_zone .content_all {
+  margin: 0 auto;
+  width: 80%;
+}
+.all .left_zone .content_all h1 {
+  font-size: 20px;
+  color: rgb(89, 102, 122);
+  line-height: 2.5;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(125, 142, 158);
+}
+.all .left_zone .content_all .content_box {
+  padding: 30px 0;
+  position: relative;
+}
+.all .left_zone .content_all .content_box .content_text {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+.all .left_zone .content_all .content_box .content_text p {
+  font-size: 14px;
+  font-weight: 300;
+  word-break: keep-all;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.all .left_zone .content_all .content_box::after {
+  content: "펼쳐보기 \f13a";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #4076b5;
+  font-size: 13px;
+  cursor: pointer;
+}
+.all .side {
+  width: 20%;
+}
+.all .side div:nth-child(1) {
+  width: 207px;
+  height: 207px;
+}
+.all .side div:nth-child(1) img {
+  width: 100%;
+}
+.all .side .text_all {
+  padding: 20px;
+}
+.all .side .text_all h5 {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 2.5;
+}
+.all .side .text_all ul {
+  width: 185px;
+}
+.all .side .text_all ul li {
+  width: 100%;
+  border-top: 1px solid rgb(221, 221, 221);
+  padding: 3px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.all .side .text_all ul li span.num {
+  color: rgb(230, 73, 56);
+  font-weight: 500;
+  font-size: 12px;
+  padding-right: 6px;
+}
+.all .side .text_all ul li span.num_text {
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: 300;
+}
+.all .side .text_all ul li span.num_text:hover {
+  color: rgb(31, 140, 230);
+}
+.all .side .text_all .more_btn {
+  width: 185px;
+  background-color: rgb(223, 223, 223);
+  font-size: 11px;
+  padding: 4px 0px;
+  text-align: center;
+  margin-top: 4px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+}
+.all .side .text_all .more_btn span {
+  font-size: 8px;
+  color: rgb(51, 51, 51);
 }

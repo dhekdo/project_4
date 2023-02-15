@@ -20,3 +20,19 @@ $de_font : 'Spoqa Han Sans Neo', 'sans-serif';
     color: #555;
     opacity: 0;
 }
+
+@mixin con_title_font {
+    font-size: 20px;
+    color: rgb(89, 102, 122);
+    line-height: 2.5;
+    font-weight: 500;
+
+}
+
+@mixin con_sub_font {
+    font-size: 14px;
+                font-weight: 300;
+                word-break: keep-all;
+                word-wrap: break-word;
+                line-height: 1.5;
+}

@@ -3,13 +3,13 @@
 @import 'color', 'font';
 
 body {
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
-  }
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
 
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,9 +17,13 @@ body {
     color: $fontcolor;
     font-family: $de_font;
 }
-ul, ol, li {
+
+ul,
+ol,
+li {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: $fontcolor
@@ -30,7 +34,7 @@ header {
     top: 0;
     width: 100%;
     height: 64px;
-    border-bottom: 1px solid  #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
     background-color: #fff;
     z-index: 100;
     opacity: 0.8;
@@ -43,25 +47,28 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        .logo > img {
+        .logo>img {
             width: 56px;
             height: 24px;
             cursor: pointer;
         }
+
         .menu {
             display: flex;
             align-items: center;
+
             ul {
                 display: flex;
                 justify-content: space-evenly;
-    
+
                 li {
-                    a{
+                    a {
                         font-family: $de_font;
                         padding: 20px 24px;
                     }
                 }
             }
+
             button {
                 background-color: #333;
                 border-radius: 100px;
@@ -73,78 +80,370 @@ header {
                 margin-left: 24px;
             }
         }
-        
-    }   
+
+    }
 }
 
-.top {
-    width: 100%;
-    padding: 200px 0;
+.all {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
 
-    .top_wrap {
-        width: 1200px;
-        margin: 0 auto;
+    .left_zone {
+        width: 80%;
+        border-right: 1px solid #dfdfdf;
 
-        .book_cover_all {
-            width: 50%;
+        .top {
+            width: 100%;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
+            
 
-            .book_cover {
+            .top_wrap {
                 width: 100%;
-                 .thum {
-                    width: 200px;
-                    height: 302px;
 
-                    img {
-                        width: 100%;
-                        cursor:zoom-in;
+                .book_cover_all {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .book_cover {
+                        width: 200px;
+
+                        .thum {
+                            width: 100%;
+                            height: 302px;
+                            margin: 0 auto;
+
+                            img {
+                                width: 100%;
+                                cursor: zoom-in;
+                            }
+                        }
+
+                        .thum2 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100Vh;
+                            margin: 0 auto;
+                            text-align: center;
+                            display: none;
+                            z-index: 10;
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            i {
+                                position: absolute;
+                                top: 8%;
+                                right: 10%;
+                                transform: translate(-50%, -50%);
+                                color: #fff;
+                                font-size: 40px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .thum_back {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100vh;
+                            background-color: #333;
+                            opacity: 0.8;
+                            z-index: 0;
+                            display: none;
+                        }
+
+                        .btn {
+                            margin: 10px auto;
+                            width: 130px;
+                            height: 40px;
+                            border: 2px solid #1f8ce6;
+                            color: #1f8ce6;
+                            border-radius: 5px;
+                            text-align: center;
+                            font-weight: 700;
+                            padding: 10px 10px;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .book_info {
+                        width: 68%;
+
+                        .head {
+                            margin-bottom: 20px;
+
+                            h6 {
+                                font-size: 12px;
+                                font-weight: 300;
+
+                                b {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            h1 {
+                                font-size: 30px;
+                                font-weight: 700;
+                                line-height: 1.8;
+                            }
+
+                            h5 {
+                                font-size: 13px;
+                                color: #666;
+                                font-weight: 300;
+                            }
+
+                            .star {
+                                display: flex;
+                                align-items: center;
+                                margin: 15px 0;
+
+                                img {
+                                    width: 70px;
+                                    height: 14px;
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                    color: #fa722e;
+                                    padding: 0 5px;
+
+                                    &::after {
+                                        content: " (1명)";
+                                        font-size: 12px;
+                                        color: #666;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+
+                        .foot {
+                            border-top: 1px solid #c0c0c0;
+                            padding: 20px 0;
+
+                            table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                border-top: 1px solid #e6e8eb;
+                                border-bottom: 1px solid #e6e8eb;
+                                border-spacing: px;
+
+                                tr {
+                                    th {
+                                        width: 30%;
+                                        background-color: #f7fafc;
+                                        border-right: 1px solid #e6e8eb;
+                                        font-size: 13px;
+                                        font-weight: 400;
+                                        padding: 20px;
+                                    }
+
+                                    td {
+                                        font-size: 13px;
+                                        font-weight: 200;
+                                        padding: 5px 10px;
+                                        width: 40%;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .bt_all {
+                            width: 55%;
+                            display: flex;
+                            align-items: center;
+                            float: right;
+
+                            div {
+                                width: 48px;
+                                height: 48px;
+                                border: 1px solid #d1d5d9;
+                                display: inline-block;
+                                text-align: center;
+                                line-height: 48px;
+                                border-radius: 3px;
+                                margin-left: 5px;
+                                cursor: pointer;
+
+                                i {
+                                    display: inline-block;
+                                    width: 21px;
+                                    color: #808991;
+                                }
+
+                            }
+
+                            .text_icon {
+                                color: #fff;
+                                background-color: #1f8ce6;
+                                flex-grow: 2;
+                                font-weight: 500;
+                            }
+                        }
+
                     }
                 }
 
-                .thum2 {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                .info_all {
+                    width: 80%;
+                    margin: 30px auto;
+                    border: 3px solid #e6e8eb;
+                    padding: 20px;
+                    display: flex;
+
+                    ul {
+                        width: 50%;
+
+                        li {
+
+                            b {
+                                font-size: 12px;
+                                color: #666;
+                                margin-right: 10px;
+                            }
+
+                            span {
+                                font-size: 12px;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+        .content_all {
+            margin: 0 auto;
+            width: 80%;
+
+            h1 {
+                @include con_title_font;
+                border-bottom : 2px solid rgb(125, 142, 158);
+            }
+
+            .content_box {
+                padding: 30px 0;
+                position: relative;
+
+                .content_text {
                     width: 100%;
-                    height: 100Vh;
-                    text-align: center;
-                    background-color: #333;
-                    display: none;
-
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                    i {
-                        position: absolute;
-                        top: 10%;
-                        right: 30%;
-                        transform: translate(-50%, -50%);
-                        color: #fff;
-                        font-size: 40px;
-                        cursor: pointer;
+                    height: 210px;
+                    overflow: hidden;
+                    
+                    p {
+                        @include con_sub_font;
+                        margin-top: 20px;
                     }
                 }
 
-                .btn {
-                    margin: 10px 0;
-                    width: 130px;
-                    height: 40px;
-                    border: 2px solid #1f8ce6;
-                    color: #1f8ce6;
-                    border-radius: 10px;
-                    text-align: center;
-                    font-weight: 700;
-                    padding: 10px 10px;
-                    font-size: 14px;
+                &::after {
+                    content: "펼쳐보기 \f13a";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    color: #4076b5;
+                    font-size: 13px;
+                    cursor: pointer;
+                }
+
+            }
+
+            
+            
+
+        }
+    }
+
+
+    .side {
+        width: 20%;
+
+        div:nth-child(1) {
+            width: 207px;
+            height: 207px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text_all {
+            padding: 20px;
+
+            h5 {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 2.5;
+            }
+
+            ul {
+                width: 185px;
+
+                li {
+                    width: 100%;
+                    border-top: 1px solid rgb(221, 221, 221);
+                    padding: 3px 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
+
+                    span.num {
+                        color: rgb(230, 73, 56);
+                        font-weight: 500;
+                        font-size: 12px;
+                        padding-right: 6px;
+                    }
+
+                    span.num_text {
+                        font-size: 12px;
+                        white-space: nowrap;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: rgb(31, 140, 230);
+                        }
+                    }
+                }
+            }
+
+            .more_btn {
+                width: 185px;
+                background-color: rgb(223, 223, 223);
+                font-size: 11px;
+                padding: 4px 0px;
+                text-align: center;
+                margin-top: 4px;
+                color: rgb(51, 51, 51);
+                cursor: pointer;
+
+                span {
+                    font-size: 8px;
+                    color: rgb(51, 51, 51);
                 }
             }
         }
     }
 }
+
 
 
