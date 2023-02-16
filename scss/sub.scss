@@ -250,11 +250,13 @@ header {
                                 tr {
                                     th {
                                         width: 30%;
-                                        background-color: #f7fafc;
+                                        // background-color: #f7fafc;
+                                        background-color: #fff5b1;
                                         border-right: 1px solid #e6e8eb;
                                         font-size: 13px;
                                         font-weight: 400;
                                         padding: 20px;
+                                        color: #333;
                                     }
 
                                     td {
@@ -295,7 +297,7 @@ header {
                             div {
                                 width: 48px;
                                 height: 48px;
-                                border: 1px solid #ffeb60;
+                                border: 2px solid #ffeb60;
                                 display: inline-block;
                                 text-align: center;
                                 line-height: 48px;
@@ -687,7 +689,7 @@ header {
                     font-weight: 300;
 
                     &:hover {
-                        color: rgb(31, 140, 230);
+                        background-color: #ffeb60;
                     }
                 }
             }

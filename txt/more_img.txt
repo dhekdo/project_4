@@ -1,75 +1,75 @@
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>
 <div>
 	<div class="more_cover"></div>
 	<div class="more_title"></div>
-	<span class="more_price">소장</span>
+	<span class="more_price">판매가</span>
 </div>

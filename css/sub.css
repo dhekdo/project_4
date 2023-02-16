@@ -217,11 +217,12 @@ header .header_wrap .menu button {
 }
 .all .left_zone .top .top_wrap .book_cover_all .book_info .foot table tr th {
   width: 30%;
-  background-color: #f7fafc;
+  background-color: #fff5b1;
   border-right: 1px solid #e6e8eb;
   font-size: 13px;
   font-weight: 400;
   padding: 20px;
+  color: #333;
 }
 .all .left_zone .top .top_wrap .book_cover_all .book_info .foot table tr td {
   font-size: 13px;
@@ -254,7 +255,7 @@ header .header_wrap .menu button {
 .all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div {
   width: 48px;
   height: 48px;
-  border: 1px solid #ffeb60;
+  border: 2px solid #ffeb60;
   display: inline-block;
   text-align: center;
   line-height: 48px;
@@ -558,7 +559,7 @@ header .header_wrap .menu button {
   font-weight: 300;
 }
 .side .text_all ul li span.num_text:hover {
-  color: rgb(31, 140, 230);
+  background-color: #ffeb60;
 }
 .side .text_all .more_btn {
   width: 185px;
