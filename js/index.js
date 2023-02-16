@@ -29,10 +29,10 @@ $.ajax({
 
     for( var i = 0; i < boxs.length; i++ ){
         
-        $(".cover1").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
-        $(".book_title1").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
-        $(".person1").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
-        $(".con1").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+        $(".cover1").eq(i).append("<a href='sub.html'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title1").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].title + "</a>");
+        $(".person1").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].authors + "</a>");
+        $(".con1").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].contents.substring(0, 30) + "</a>")
 
         // 라벨 삽입
         if( i == 0 || i == 3 || i == 4  ){
@@ -61,10 +61,10 @@ $.ajax({
 
     for( var i = 0; i < boxs.length; i++ ){
         
-        $(".cover2").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
-        $(".book_title2").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
-        $(".person2").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
-        $(".con2").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+        $(".cover2").eq(i).append("<a href='sub.html'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title2").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].title + "</a>");
+        $(".person2").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].authors + "</a>");
+        $(".con2").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].contents.substring(0, 30) + "</a>")
     }
 });
 
@@ -81,10 +81,10 @@ $.ajax({
 
     for( var i = 0; i < boxs.length; i++ ){
         
-        $(".cover3").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
-        $(".book_title3").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
-        $(".person3").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
-        $(".con3").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>");
+        $(".cover3").eq(i).append("<a href='sub.html'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title3").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].title + "</a>");
+        $(".person3").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].authors + "</a>");
+        $(".con3").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].contents.substring(0, 30) + "</a>");
         $(".cover3").eq(i).prepend("<img src ='img/badge-full.a98c7199ab8829b059a2386c6f91efca.png' class = 'wan'>");
             $(".cover3").eq(i).prepend("<img src ='img/badge-readingbook.6d3d4deb89226cd278417a183150b386.png' class = 'mp'>");
 
@@ -112,10 +112,10 @@ $.ajax({
 
     for( var i = 0; i < boxs.length; i++ ){
         
-        $(".cover4").eq(i).append("<a href='#'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
-        $(".book_title4").eq(i).append("<a href = 'sub_book13.html'>" + msg.documents[i].title + "</a>");
-        $(".person4").eq(i).append("<a href = ''>" + msg.documents[i].authors + "</a>");
-        $(".con4").eq(i).append("<a href = ''>" + msg.documents[i].contents.substring(0, 30) + "</a>")
+        $(".cover4").eq(i).append("<a href='sub.html'>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".book_title4").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].title + "</a>");
+        $(".person4").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].authors + "</a>");
+        $(".con4").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].contents.substring(0, 30) + "</a>")
     }
 });
 
