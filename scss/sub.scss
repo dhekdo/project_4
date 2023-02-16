@@ -157,7 +157,7 @@ header {
                             top: 0;
                             left: 0;
                             width: 100%;
-                            height: 100vw;
+                            height: 100vh;
                             background-color: #333;
                             opacity: 0.8;
                             z-index: 0;
@@ -262,6 +262,24 @@ header {
                                         font-weight: 200;
                                         padding: 5px 10px;
                                         width: 40%;
+
+                                        &.foot_price {
+                                            text-align: right;
+                                        }
+                                        &.foot_sale_price {
+                                            text-align: right;
+                                            span {
+                                                color: #1f8ce6;
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                        span {
+                                            font-size: 13px;
+                                            font-weight: 400;
+                                            padding: 5px 10px;
+                                            width: 40%;
+                                        }
                                     }
                                 }
                             }

@@ -19,6 +19,25 @@ $(".content_box").click(function(){
 
 });
 
+// 상단 책정보
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "논어", size: 15 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("foot_price");
+    
+
+    for( var i = 0; i < boxs.length; i++ ){ 
+        $(".foot_price").eq(i).append("<span>" + msg.documents[i].price + "원" + "</span>");
+        $(".foot_sale_price").eq(i).append("<span>" + msg.documents[i].sale_price + "원" + "</span>");
+    }  
+});
+
+
 // 대표저서 구좌
 $.ajax({
     method : "GET",
@@ -53,9 +72,7 @@ $.ajax({
         $(".more_cover").eq(i).append("<a href=''>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
         $(".more_title").eq(i).append("<a href = ''>" + msg.documents[i].title + "</a>");
         $(".more_price").eq(i).append("<a href = ''>" + msg.documents[i].price + "원" + "</a>");
-    }
-        
-    
+    }  
 });
 
 // 사이드 순위 구좌
