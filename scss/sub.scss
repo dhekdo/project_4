@@ -93,6 +93,7 @@ header {
     .left_zone {
         width: 80%;
         border-right: 1px solid #dfdfdf;
+        margin-bottom: 80px;
 
         .top {
             width: 100%;
@@ -167,14 +168,19 @@ header {
                             margin: 10px auto;
                             width: 130px;
                             height: 40px;
-                            border: 1.5px solid #1f8ce6;
-                            color: #1f8ce6;
+                            border: 2px solid #ffeb60;
+                            color: #333;
                             border-radius: 5px;
                             text-align: center;
                             font-weight: 700;
                             padding: 10px 10px;
                             font-size: 14px;
                             cursor: pointer;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                background-color: #ffeb60;
+                            }
                         }
                     }
 
@@ -271,26 +277,37 @@ header {
                             div {
                                 width: 48px;
                                 height: 48px;
-                                border: 1px solid #d1d5d9;
+                                border: 1px solid #ffeb60;
                                 display: inline-block;
                                 text-align: center;
                                 line-height: 48px;
                                 border-radius: 3px;
                                 margin-left: 5px;
                                 cursor: pointer;
+                                transition: all 0.4s;
+
+                                &:hover {
+                                    background-color: #ffeb60;
+                                }
 
                                 i {
                                     display: inline-block;
                                     width: 21px;
-                                    color: #808991;
+                                    // color: #808991;
+                                    color: #333;
                                 }
                             }
 
                             .text_icon {
-                                color: #fff;
-                                background-color: #1f8ce6;
+                                color: #333;
+                                background-color: #ffeb60;
                                 flex-grow: 2;
                                 font-weight: 500;
+                                border: none;
+
+                                &:hover {
+                                    background-color: #fff5b1;
+                                }
                             }
                         }
                     }
@@ -338,7 +355,7 @@ header {
                 border-bottom: 2px solid rgb(125, 142, 158);
             }
 
-            
+
             .content_box {
                 padding: 30px 0;
                 position: relative;
@@ -350,7 +367,7 @@ header {
                     cursor: pointer;
 
                     ul {
-                        li{
+                        li {
                             @include con_sub_font;
                         }
                     }
@@ -374,16 +391,16 @@ header {
                 }
 
                 &.content_out::after {
-                        content: "접기 \f139";
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        font-family: "Font Awesome 5 Free";
-                        font-weight: 900;
-                        color: #4076b5;
-                        font-size: 13px;
-                        cursor: pointer;
-                    }
+                    content: "접기 \f139";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    color: #4076b5;
+                    font-size: 13px;
+                    cursor: pointer;
+                }
             }
 
             .profile {
@@ -420,15 +437,19 @@ header {
                     div>div {
                         margin: 20px 0;
                         width: 170px;
-                        border: 1.5px solid #1f8ce6;
+                        border: 2px solid #ffeb60;
                         border-radius: 5px;
                         text-align: center;
                         padding: 4px 10px;
-
                         cursor: pointer;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            background-color: #ffeb60;
+                        }
 
                         span {
-                            color: #1f8ce6;
+                            color: #333;
                             font-weight: 500;
                             font-size: 13px;
                         }
@@ -492,7 +513,7 @@ header {
                                 margin-left: 10px;
                                 color: #999;
                                 cursor: pointer;
-                                
+
                                 &:not(:last-child) {
                                     &::after {
                                         content: "";
@@ -508,14 +529,14 @@ header {
                     }
 
                     .img_box {
-                            display: flex;
-                            justify-content: space-evenly;
-                            margin: 20px 0;
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin: 20px 0;
 
                         >div {
                             width: 19%;
                             text-align: center;
-                            
+
                             .img_cover {
 
                                 img {
@@ -531,7 +552,7 @@ header {
                                 a {
                                     font-size: 12px;
                                 }
-                                
+
                             }
                         }
                     }
@@ -543,84 +564,135 @@ header {
                 >div {
                     padding: 5px 0;
                     margin: 10px 0 30px;
-                    border-bottom: 1px solid #d1d5d9;
                 }
-                
+
+                iframe {
+                    margin-bottom: 20px;
+                }
+
             }
-        }
-    }
 
-
-    .side {
-        width: 20%;
-
-        div:nth-child(1) {
-            width: 207px;
-            height: 207px;
-
-            img {
+            .more_img {
                 width: 100%;
-            }
-        }
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 30px 0;
 
-        .text_all {
-            padding: 20px;
+                >div {
+                    width: 18%;
+                    text-align: center;
+                    margin-bottom: 50px;
 
-            h5 {
-                font-weight: 500;
-                font-size: 13px;
-                line-height: 2.5;
-            }
 
-            ul {
-                width: 185px;
-
-                li {
-                    width: 100%;
-                    border-top: 1px solid rgb(221, 221, 221);
-                    padding: 3px 0;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    cursor: pointer;
-
-                    span.num {
-                        color: rgb(230, 73, 56);
-                        font-weight: 500;
-                        font-size: 12px;
-                        padding-right: 6px;
+                    img {
+                        width: 70%;
                     }
 
-                    span.num_text {
-                        font-size: 12px;
+                    .more_title {
+                        width: 70%;
+                        overflow: hidden;
                         white-space: nowrap;
-                        font-weight: 300;
+                        text-overflow: ellipsis;
+                        margin: 0 auto 5px;
+                        text-align: left;
 
-                        &:hover {
-                            color: rgb(31, 140, 230);
+                        a {
+                            font-size: 12px;
                         }
                     }
-                }
-            }
 
-            .more_btn {
-                width: 185px;
-                background-color: rgb(223, 223, 223);
-                font-size: 11px;
-                padding: 4px 0px;
-                text-align: center;
-                margin-top: 4px;
-                color: rgb(51, 51, 51);
-                cursor: pointer;
+                    .more_price {
+                        width: 70%;
+                        margin: 0 auto;
+                        display: block;
+                        font-size: 12px;
+                        text-align: left;
 
-                span {
-                    font-size: 8px;
-                    color: rgb(51, 51, 51);
+                        a {
+                            margin-left: 5px;
+                            font-size: 12px;
+                            color: #1f8ce6;
+                        }
+
+                    }
                 }
             }
         }
     }
 }
+
+
+.side {
+    width: 20%;
+
+    div:nth-child(1) {
+        width: 207px;
+        height: 207px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text_all {
+        padding: 20px;
+
+        h5 {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 2.5;
+        }
+
+        ul {
+            width: 185px;
+
+            li {
+                width: 100%;
+                border-top: 1px solid rgb(221, 221, 221);
+                padding: 3px 0;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                cursor: pointer;
+
+                span.num {
+                    color: rgb(230, 73, 56);
+                    font-weight: 500;
+                    font-size: 12px;
+                    padding-right: 6px;
+                }
+
+                span.num_text {
+                    font-size: 12px;
+                    white-space: nowrap;
+                    font-weight: 300;
+
+                    &:hover {
+                        color: rgb(31, 140, 230);
+                    }
+                }
+            }
+        }
+
+        .more_btn {
+            width: 185px;
+            background-color: rgb(223, 223, 223);
+            font-size: 11px;
+            padding: 4px 0px;
+            text-align: center;
+            margin-top: 4px;
+            color: rgb(51, 51, 51);
+            cursor: pointer;
+
+            span {
+                font-size: 8px;
+                color: rgb(51, 51, 51);
+            }
+        }
+    }
+}
+
 
 // 푸터
 footer {
@@ -628,7 +700,7 @@ footer {
     padding: 20px 0 80px;
     margin-top: 50px;
     border-top: 1px solid #dfdfdf;
-    
+
     .footer_wrap {
         width: 1200px;
         margin: 0 auto;
@@ -643,9 +715,12 @@ footer {
                 display: flex;
 
                 li {
+                    cursor: pointer;
+
                     &:not(:last-child) {
                         margin-right: 10px;
                     }
+
                     img {
                         width: 24px;
                     }
@@ -657,11 +732,12 @@ footer {
             margin: 20px 0;
             display: flex;
             align-items: center;
-            
+
             a {
-                    color: #a5a5a5;
-                    font-size: 10px;
+                color: #a5a5a5;
+                font-size: 10px;
             }
+
             img {
                 width: 12px;
             }
@@ -675,6 +751,7 @@ footer {
 
                 li {
                     margin-right: 10px;
+
                     &::after {
                         content: " >";
                         font-size: 12px;
@@ -690,7 +767,7 @@ footer {
                         font-size: 12px;
                         color: #6f6f6f;
                     }
-                    
+
                 }
             }
         }
@@ -703,4 +780,4 @@ footer {
         }
     }
 }
-   
+

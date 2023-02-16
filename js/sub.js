@@ -8,6 +8,17 @@ $(".fa-xmark, .thum2").click(function(){
     $("header").show();
 });
 
+// 펼쳐보기 버튼
+$(".content_box").click(function(){
+    $(this).children(".content_text").toggleClass("content_on").css({"height": "auto", "overflow":"visible"});
+    $(this).toggleClass("content_out");
+
+    if( $(this).children(".content_text").hasClass("content_on") == false ){
+        $(this).children(".content_text").css({"height": "210px", "overflow":"hidden"});
+    }
+
+});
+
 // 대표저서 구좌
 $.ajax({
     method : "GET",
@@ -24,6 +35,27 @@ $.ajax({
         $(".img_cover").eq(i).append("<a href=''>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
         $(".img_title").eq(i).append("<a href = 'sub.html'>" + msg.documents[i].title + "</a>");
     }
+});
+
+// 같은 출판사 책 정보 불러오기
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "논어", size: 15 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("more_cover");
+    
+
+    for( var i = 0; i < boxs.length; i++ ){ 
+        $(".more_cover").eq(i).append("<a href=''>" + "<img src = '" + msg.documents[i].thumbnail + "'/>" + "</a>");
+        $(".more_title").eq(i).append("<a href = ''>" + msg.documents[i].title + "</a>");
+        $(".more_price").eq(i).append("<a href = ''>" + msg.documents[i].price + "원" + "</a>");
+    }
+        
+    
 });
 
 // 사이드 순위 구좌
@@ -60,16 +92,8 @@ $(function(){
     $.get("./txt/content4.txt", function(data){
         $(".content4").html(data);
     })
-
+    $.get("./txt/more_img.txt", function(data){
+        $(".more_img").html(data);
+    })
 });
 
-// 펼쳐보기 버튼
-$(".content_box").click(function(){
-    $(this).children(".content_text").toggleClass("content_on").css({"height": "auto", "overflow":"visible"});
-    $(this).toggleClass("content_out");
-
-    if( $(this).children(".content_text").hasClass("content_on") == false ){
-        $(this).children(".content_text").css({"height": "210px", "overflow":"hidden"});
-    }
-
-});

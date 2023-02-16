@@ -1100,6 +1100,9 @@ footer .footer_wrap .top {
 footer .footer_wrap .top ul {
   display: flex;
 }
+footer .footer_wrap .top ul li {
+  cursor: pointer;
+}
 footer .footer_wrap .top ul li:not(:last-child) {
   margin-right: 10px;
 }

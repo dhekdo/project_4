@@ -80,6 +80,7 @@ header .header_wrap .menu button {
 .all .left_zone {
   width: 80%;
   border-right: 1px solid #dfdfdf;
+  margin-bottom: 80px;
 }
 .all .left_zone .top {
   width: 100%;
@@ -147,14 +148,18 @@ header .header_wrap .menu button {
   margin: 10px auto;
   width: 130px;
   height: 40px;
-  border: 1.5px solid #1f8ce6;
-  color: #1f8ce6;
+  border: 2px solid #ffeb60;
+  color: #333;
   border-radius: 5px;
   text-align: center;
   font-weight: 700;
   padding: 10px 10px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_cover .btn:hover {
+  background-color: #ffeb60;
 }
 .all .left_zone .top .top_wrap .book_cover_all .book_info {
   width: 68%;
@@ -233,24 +238,32 @@ header .header_wrap .menu button {
 .all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div {
   width: 48px;
   height: 48px;
-  border: 1px solid #d1d5d9;
+  border: 1px solid #ffeb60;
   display: inline-block;
   text-align: center;
   line-height: 48px;
   border-radius: 3px;
   margin-left: 5px;
   cursor: pointer;
+  transition: all 0.4s;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div:hover {
+  background-color: #ffeb60;
 }
 .all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all div i {
   display: inline-block;
   width: 21px;
-  color: #808991;
+  color: #333;
 }
 .all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all .text_icon {
-  color: #fff;
-  background-color: #1f8ce6;
+  color: #333;
+  background-color: #ffeb60;
   flex-grow: 2;
   font-weight: 500;
+  border: none;
+}
+.all .left_zone .top .top_wrap .book_cover_all .book_info .bt_all .text_icon:hover {
+  background-color: #fff5b1;
 }
 .all .left_zone .top .top_wrap .info_all {
   width: 80%;
@@ -359,14 +372,18 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .profile .profile_box_text div > div {
   margin: 20px 0;
   width: 170px;
-  border: 1.5px solid #1f8ce6;
+  border: 2px solid #ffeb60;
   border-radius: 5px;
   text-align: center;
   padding: 4px 10px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.all .left_zone .content_all .profile .profile_box_text div > div:hover {
+  background-color: #ffeb60;
 }
 .all .left_zone .content_all .profile .profile_box_text div > div span {
-  color: #1f8ce6;
+  color: #333;
   font-weight: 500;
   font-size: 13px;
 }
@@ -440,30 +457,71 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .content_video > div {
   padding: 5px 0;
   margin: 10px 0 30px;
-  border-bottom: 1px solid #d1d5d9;
 }
-.all .side {
+.all .left_zone .content_all .content_video iframe {
+  margin-bottom: 20px;
+}
+.all .left_zone .content_all .more_img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+.all .left_zone .content_all .more_img > div {
+  width: 18%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.all .left_zone .content_all .more_img > div img {
+  width: 70%;
+}
+.all .left_zone .content_all .more_img > div .more_title {
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 auto 5px;
+  text-align: left;
+}
+.all .left_zone .content_all .more_img > div .more_title a {
+  font-size: 12px;
+}
+.all .left_zone .content_all .more_img > div .more_price {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  font-size: 12px;
+  text-align: left;
+}
+.all .left_zone .content_all .more_img > div .more_price a {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #1f8ce6;
+}
+
+.side {
   width: 20%;
 }
-.all .side div:nth-child(1) {
+.side div:nth-child(1) {
   width: 207px;
   height: 207px;
 }
-.all .side div:nth-child(1) img {
+.side div:nth-child(1) img {
   width: 100%;
 }
-.all .side .text_all {
+.side .text_all {
   padding: 20px;
 }
-.all .side .text_all h5 {
+.side .text_all h5 {
   font-weight: 500;
   font-size: 13px;
   line-height: 2.5;
 }
-.all .side .text_all ul {
+.side .text_all ul {
   width: 185px;
 }
-.all .side .text_all ul li {
+.side .text_all ul li {
   width: 100%;
   border-top: 1px solid rgb(221, 221, 221);
   padding: 3px 0;
@@ -472,21 +530,21 @@ header .header_wrap .menu button {
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.all .side .text_all ul li span.num {
+.side .text_all ul li span.num {
   color: rgb(230, 73, 56);
   font-weight: 500;
   font-size: 12px;
   padding-right: 6px;
 }
-.all .side .text_all ul li span.num_text {
+.side .text_all ul li span.num_text {
   font-size: 12px;
   white-space: nowrap;
   font-weight: 300;
 }
-.all .side .text_all ul li span.num_text:hover {
+.side .text_all ul li span.num_text:hover {
   color: rgb(31, 140, 230);
 }
-.all .side .text_all .more_btn {
+.side .text_all .more_btn {
   width: 185px;
   background-color: rgb(223, 223, 223);
   font-size: 11px;
@@ -496,7 +554,7 @@ header .header_wrap .menu button {
   color: rgb(51, 51, 51);
   cursor: pointer;
 }
-.all .side .text_all .more_btn span {
+.side .text_all .more_btn span {
   font-size: 8px;
   color: rgb(51, 51, 51);
 }
@@ -519,6 +577,9 @@ footer .footer_wrap .top {
 }
 footer .footer_wrap .top ul {
   display: flex;
+}
+footer .footer_wrap .top ul li {
+  cursor: pointer;
 }
 footer .footer_wrap .top ul li:not(:last-child) {
   margin-right: 10px;
