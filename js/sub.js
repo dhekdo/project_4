@@ -56,12 +56,45 @@ $.ajax({
     }  
 });
 
-
-// 대표저서 구좌
 $.ajax({
     method : "GET",
     url : "https://dapi.kakao.com/v3/search/book?target=title",
-    data : { query : "논어", size: 6 },
+    data : { query : "인생을위한고전", size: 1 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("profile_box");
+    
+
+    for( var i = 0; i < boxs.length; i++ ){ 
+        $(".profile_box > .authors").eq(i).append("<span class='profile_on'>" + msg.documents[i].authors + "</span>");
+        $(".profile_box > .translators").eq(i).append("<span>" + msg.documents[i].translators + "</span>");
+
+    }  
+});
+
+
+// 저자 프로필 구좌
+$(".profile_box span").click(function(){
+    var profileIndex = $(this).index();
+
+    $(this).children().addClass("profile_on").end().siblings().children().removeClass("profile_on");
+    $(".profile_box_text > div").eq(profileIndex).show().siblings().hide();
+});
+
+// 대표저서 구좌
+$(".profile_img li").click(function(){
+    var imgIndex = $(this).index();
+
+    $(this).css({"color": "black"}).siblings().css({"color":""});
+    $(".img_show > div").eq(imgIndex).css("display", "flex").siblings().hide();
+});
+
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "논어", size: 15 },
     headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
 })
 
@@ -75,7 +108,12 @@ $.ajax({
     }
 });
 
-// 같은 출판사 책 정보 불러오기
+// 같은 출판사 구좌
+$(".more_btn2").click(function(){
+    $(this).hide();
+    $(".more_img .img_hide").show();
+});
+
 $.ajax({
     method : "GET",
     url : "https://dapi.kakao.com/v3/search/book?target=title",

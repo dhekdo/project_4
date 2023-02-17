@@ -567,24 +567,37 @@ header {
 
             .profile {
 
+                .profile_on {
+                    border-bottom: 1px solid black;
+                    padding: 6px 0;
+                }
+
                 .profile_box {
                     padding: 5px 0;
                     margin: 10px 0 30px;
                     border-bottom: 1px solid #d1d5d9;
 
-                    span {
-                        font-size: 14px;
+                     > span {
+                        font-size: 12px;
                         font-weight: 300;
                         color: #808991;
                         margin-right: 15px;
-                    }
+                        cursor: pointer;
 
-                    span.line {
-                        display: inline-block;
-                        width: 1px;
-                        height: 10px;
-                        background-color: #808991;
-                        // margin: 0 15px;
+                        &:first-child::after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 10px;
+                            background-color: #808991;
+                            margin-left: 20px;
+                        }
+
+                        >span {
+                            font-size: 12px;
+                            font-weight: 400;
+                            margin-left: 10px;
+                        }
                     }
                 }
 
@@ -685,6 +698,33 @@ header {
                         }
                     }
 
+                    .name2 {
+                        display: none;
+
+                        table {
+                            border-collapse: separate;
+                            border-spacing:0 5px;
+
+                            tr {
+
+                                th {
+    
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    color: #808991;
+                                    vertical-align: baseline;
+                                }
+    
+                                td {
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    padding-left: 15px;
+                                }
+                            }
+                        }
+                        
+                    } 
+
                 }
 
                 .profile_img {
@@ -752,6 +792,10 @@ header {
                             }
                         }
                     }
+
+                    .img_box2, .img_box3 {
+                        display: none;
+                    }
                 }
             }
 
@@ -773,12 +817,17 @@ header {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
+                align-content: center;
                 margin: 30px 0;
+
+                .img_hide {
+                    display: none;
+                }
 
                 >div {
                     width: 18%;
                     text-align: center;
-                    margin-bottom: 50px;
+                    margin: 50px 0;
 
 
                     img {
@@ -812,6 +861,28 @@ header {
                         }
 
                     }
+                }
+            }
+
+            .more_btn2 {
+                width: 92%;
+                margin: 0 auto;
+                height: 40px;
+                background-color: #f4f4f4;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &::after {
+                    content: "\f13a";
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                    margin-left: 5px;
+                }
+
+                &:hover {
+                    background-color: #ccc;
                 }
             }
         }

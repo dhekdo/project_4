@@ -465,22 +465,34 @@ header .header_wrap .menu button {
   font-size: 13px;
   cursor: pointer;
 }
+.all .left_zone .content_all .profile .profile_on {
+  border-bottom: 1px solid black;
+  padding: 6px 0;
+}
 .all .left_zone .content_all .profile .profile_box {
   padding: 5px 0;
   margin: 10px 0 30px;
   border-bottom: 1px solid #d1d5d9;
 }
-.all .left_zone .content_all .profile .profile_box span {
-  font-size: 14px;
+.all .left_zone .content_all .profile .profile_box > span {
+  font-size: 12px;
   font-weight: 300;
   color: #808991;
   margin-right: 15px;
+  cursor: pointer;
 }
-.all .left_zone .content_all .profile .profile_box span.line {
+.all .left_zone .content_all .profile .profile_box > span:first-child::after {
+  content: "";
   display: inline-block;
   width: 1px;
   height: 10px;
   background-color: #808991;
+  margin-left: 20px;
+}
+.all .left_zone .content_all .profile .profile_box > span > span {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
 }
 .all .left_zone .content_all .profile .profile_box_text {
   padding: 15px 0;
@@ -555,6 +567,24 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .profile .profile_box_text .name .update > div span:hover {
   background-color: #f2f4f5;
 }
+.all .left_zone .content_all .profile .profile_box_text .name2 {
+  display: none;
+}
+.all .left_zone .content_all .profile .profile_box_text .name2 table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+.all .left_zone .content_all .profile .profile_box_text .name2 table tr th {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808991;
+  vertical-align: baseline;
+}
+.all .left_zone .content_all .profile .profile_box_text .name2 table tr td {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 15px;
+}
 .all .left_zone .content_all .profile .profile_img > div:nth-child(1) {
   display: flex;
   justify-content: space-between;
@@ -603,6 +633,9 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .profile .profile_img .img_box > div .img_title a {
   font-size: 12px;
 }
+.all .left_zone .content_all .profile .profile_img .img_box2, .all .left_zone .content_all .profile .profile_img .img_box3 {
+  display: none;
+}
 .all .left_zone .content_all .content_video > div {
   padding: 5px 0;
   margin: 10px 0 30px;
@@ -615,12 +648,16 @@ header .header_wrap .menu button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-content: center;
   margin: 30px 0;
+}
+.all .left_zone .content_all .more_img .img_hide {
+  display: none;
 }
 .all .left_zone .content_all .more_img > div {
   width: 18%;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 .all .left_zone .content_all .more_img > div img {
   width: 70%;
@@ -647,6 +684,25 @@ header .header_wrap .menu button {
   margin-left: 5px;
   font-size: 12px;
   color: #1f8ce6;
+}
+.all .left_zone .content_all .more_btn2 {
+  width: 92%;
+  margin: 0 auto;
+  height: 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.all .left_zone .content_all .more_btn2::after {
+  content: "\f13a";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  margin-left: 5px;
+}
+.all .left_zone .content_all .more_btn2:hover {
+  background-color: #ccc;
 }
 
 .side {
