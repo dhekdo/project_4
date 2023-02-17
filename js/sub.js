@@ -37,6 +37,25 @@ $.ajax({
     }  
 });
 
+$.ajax({
+    method : "GET",
+    url : "https://dapi.kakao.com/v3/search/book?target=title",
+    data : { query : "인생을위한고전", size: 1 },
+    headers : { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+})
+
+.done(function(msg){
+    var boxs = document.getElementsByClassName("book_api");
+    
+
+    for( var i = 0; i < boxs.length; i++ ){ 
+        $(".book_api > .authors").eq(i).prepend("<span>" + msg.documents[i].authors + "</span>");
+        $(".book_api > .translators").eq(i).prepend("<span>" + msg.documents[i].translators + "</span>");
+        $(".book_api > .publisher").eq(i).prepend("<span>" + msg.documents[i].publisher + "</span>");
+
+    }  
+});
+
 
 // 대표저서 구좌
 $.ajax({
