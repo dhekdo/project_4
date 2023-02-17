@@ -601,7 +601,8 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .profile .profile_img .img_box > div .img_title a {
   font-size: 12px;
 }
-.all .left_zone .content_all .profile .profile_img .img_box2, .all .left_zone .content_all .profile .profile_img .img_box3 {
+.all .left_zone .content_all .profile .profile_img .img_box2,
+.all .left_zone .content_all .profile .profile_img .img_box3 {
   display: none;
 }
 .all .left_zone .content_all .content_video > div {
@@ -611,7 +612,114 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .content_video iframe {
   margin-bottom: 20px;
 }
-.all .left_zone .content_all .more_img {
+.all .left_zone .content_all .review {
+  width: 100%;
+}
+.all .left_zone .content_all .review .star_zone {
+  width: 100%;
+  height: 670px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.all .left_zone .content_all .review .star_zone .star_img {
+  width: 15%;
+  height: 50px;
+  text-align: center;
+}
+.all .left_zone .content_all .review .star_zone .star_img > span {
+  font-size: 13px;
+}
+.all .left_zone .content_all .review .star_zone .star_img h2 {
+  font-size: 30px;
+}
+.all .left_zone .content_all .review .star_zone .star_img img {
+  width: 75px;
+}
+.all .left_zone .content_all .review .star_zone .star_img .star_all ul li {
+  font-size: 12px;
+  margin: 5px 0;
+}
+.all .left_zone .content_all .review .star_zone .star_img .star_all ul li::before {
+  content: "\f005";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+}
+.all .left_zone .content_all .review .star_zone .star_img .star_all ul li > span {
+  display: inline-block;
+  width: 72px;
+  height: 8px;
+  background-color: #e8edf3;
+  margin-left: 5px;
+}
+.all .left_zone .content_all .review .star_zone .star_img .star_all ul li > span.full {
+  display: inline-block;
+  width: 72px;
+  height: 8px;
+  background-color: #738096;
+}
+.all .left_zone .content_all .review .star_zone .star_img .star_all > span {
+  display: block;
+  font-size: 13px;
+  color: #94a2b8;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 5px;
+}
+.all .left_zone .content_all .review .star_zone .star_text {
+  width: 70%;
+  height: 50px;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div {
+  width: 100%;
+  text-align: center;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div h2 {
+  font-size: 18px;
+  color: #999;
+  font-weight: 500;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div textarea {
+  width: 100%;
+  height: 112px;
+  padding: 10px;
+  font-weight: 300;
+  resize: none;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn1 {
+  border: 2px solid #ffeb60;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn1::before {
+  content: "\f071";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  margin-right: 5px;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div > div {
+  display: flex;
+  align-items: center;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div > div > span {
+  font-size: 13px;
+  margin-left: 5px;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn2 {
+  background-color: #ffeb60;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+.all .left_zone .more_img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -619,18 +727,18 @@ header .header_wrap .menu button {
   align-content: center;
   margin: 30px 0;
 }
-.all .left_zone .content_all .more_img .img_hide {
+.all .left_zone .more_img .img_hide {
   display: none;
 }
-.all .left_zone .content_all .more_img > div {
+.all .left_zone .more_img > div {
   width: 18%;
   text-align: center;
   margin: 50px 0;
 }
-.all .left_zone .content_all .more_img > div img {
+.all .left_zone .more_img > div img {
   width: 70%;
 }
-.all .left_zone .content_all .more_img > div .more_title {
+.all .left_zone .more_img > div .more_title {
   width: 70%;
   overflow: hidden;
   white-space: nowrap;
@@ -638,22 +746,22 @@ header .header_wrap .menu button {
   margin: 0 auto 5px;
   text-align: left;
 }
-.all .left_zone .content_all .more_img > div .more_title a {
+.all .left_zone .more_img > div .more_title a {
   font-size: 12px;
 }
-.all .left_zone .content_all .more_img > div .more_price {
+.all .left_zone .more_img > div .more_price {
   width: 70%;
   margin: 0 auto;
   display: block;
   font-size: 12px;
   text-align: left;
 }
-.all .left_zone .content_all .more_img > div .more_price a {
+.all .left_zone .more_img > div .more_price a {
   margin-left: 5px;
   font-size: 12px;
   color: #1f8ce6;
 }
-.all .left_zone .content_all .more_btn2 {
+.all .left_zone .more_btn2 {
   width: 92%;
   margin: 0 auto;
   height: 40px;
@@ -663,13 +771,13 @@ header .header_wrap .menu button {
   cursor: pointer;
   font-size: 14px;
 }
-.all .left_zone .content_all .more_btn2::after {
+.all .left_zone .more_btn2::after {
   content: "\f13a";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   margin-left: 5px;
 }
-.all .left_zone .content_all .more_btn2:hover {
+.all .left_zone .more_btn2:hover {
   background-color: #ccc;
 }
 
