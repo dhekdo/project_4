@@ -108,7 +108,30 @@ $.ajax({
     }
 });
 
-// 리뷰 구좌
+//// 리뷰 구좌
+
+// 별 클릭
+$(".star_text_point").click(function(){
+    alert("로그인 상태에서 가능합니다.");
+});
+
+// 별 마우스오버 효과
+$(".star_text_point").hover(function(){
+    $(this).addClass("star_on").css("background-position", "50% -45px");
+    $(this).prevAll().addClass("star_on").css("background-position", "50% -45px");
+}, function(){
+    $(this).nextAll().removeClass("star_on").css("background-position", "50% 0px");
+});
+
+$(".star_text_point").parent().mouseout(function(){
+    $(".star_text_point").css("background-position", "50% 0px").removeClass("star_on");
+});
+
+// if( $(".star_text_point1").hasClass("star_on") == true ){
+//     $("star_text h2").
+// }
+
+// 리뷰 텍스트 구좌
 $(".sel2 ul").eq(0).show().siblings().hide();
 
 $(".sel1 li").click(function(){
