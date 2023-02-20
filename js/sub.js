@@ -108,7 +108,25 @@ $.ajax({
     }
 });
 
-// 같은 출판사 구좌
+// 리뷰 구좌
+$(".sel2 ul").eq(0).show().siblings().hide();
+
+$(".sel1 li").click(function(){
+    var selIndex = $(this).index();
+    $(this).addClass("sel_on, sel_on2").siblings().removeClass("sel_on, sel_on2");
+    $(".sel2 ul").eq(selIndex).show().siblings().hide();
+});
+
+$(".sel2 li").click(function(){
+    $(this).addClass("sel_on").siblings().removeClass("sel_on");
+});
+
+$(".star_btn2").click(function(){
+    alert("로그인 상태에서 가능합니다.");
+});
+
+
+// 다른 출판사 구좌
 $(".more_btn2").click(function(){
     $(this).hide();
     $(".more_img .img_hide").show();

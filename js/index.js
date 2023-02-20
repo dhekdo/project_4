@@ -376,8 +376,8 @@ $(window).scroll(function(){
         $(".millie_text, .millie_text > img, .millie_img").css({"opacity" : "0"});
     }
 
-    if( ws > $(".audio_text, .audio_text > img, .audio_img").offset().top - 600 ){
-        $(".audio_text, .audio_text > img, .audio_img").css({"opacity" : "1"});
+    if( ws > $(".audio_text, .audio_text > img, .audio_img").offset().top - 700 ){
+        $(".audio_text, .audio_text > img, .audio_img").css({"opacity" : "1", "transition": "all 1s"});
     }
     else {
         $(".audio_text, .audio_text > img,  .audio_img").css({"opacity" : "0"});

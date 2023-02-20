@@ -610,18 +610,28 @@ header .header_wrap .menu button {
   margin: 10px 0 30px;
 }
 .all .left_zone .content_all .content_video iframe {
+  width: 100%;
   margin-bottom: 20px;
 }
 .all .left_zone .content_all .review {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .all .left_zone .content_all .review .star_zone {
   width: 100%;
-  height: 670px;
+  height: 550px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
+}
+.all .left_zone .content_all .review .star_zone > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
 }
 .all .left_zone .content_all .review .star_zone .star_img {
   width: 15%;
@@ -668,58 +678,167 @@ header .header_wrap .menu button {
   padding-top: 5px;
 }
 .all .left_zone .content_all .review .star_zone .star_text {
-  width: 70%;
+  width: 82%;
   height: 50px;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div {
-  width: 100%;
+.all .left_zone .content_all .review .star_zone .star_text > div:nth-child(1) {
   text-align: center;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div h2 {
+.all .left_zone .content_all .review .star_zone .star_text > div:nth-child(1) h2 {
   font-size: 18px;
   color: #999;
   font-weight: 500;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div textarea {
+.all .left_zone .content_all .review .star_zone .star_text > div:nth-child(2) {
+  width: 50%;
+  margin: 20px auto;
+  display: flex;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div:nth-child(2) > div {
+  width: 64px;
+  height: 48px;
+  background-image: url(../img/icon_star@2x.png);
+  background-size: 45px 90px;
+  background-repeat: no-repeat;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child {
+  width: 100%;
+  text-align: center;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child textarea {
   width: 100%;
   height: 112px;
   padding: 10px;
   font-weight: 300;
   resize: none;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn1 {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div .star_btn1 {
   border: 2px solid #ffeb60;
   font-size: 13px;
   padding: 5px 10px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn1::before {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div .star_btn1::before {
   content: "\f071";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   margin-right: 5px;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div > div {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div .star_btn1:hover {
+  background-color: #ffeb60;
+}
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div > div {
   display: flex;
   align-items: center;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div > div > span {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div > div > span {
   font-size: 13px;
   margin-left: 5px;
 }
-.all .left_zone .content_all .review .star_zone .star_text > div > div .star_btn2 {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div .star_btn2 {
   background-color: #ffeb60;
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 13px;
   margin-left: 15px;
+  cursor: pointer;
+  transition: all 0.4s;
 }
-.all .left_zone .more_img {
+.all .left_zone .content_all .review .star_zone .star_text > div:last-child > div .star_btn2:hover {
+  background-color: #fff5b1;
+}
+.all .left_zone .content_all .review .star_zone .review_text {
+  width: 100%;
+  height: 50%;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel1 {
+  width: 14%;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel1 li {
+  margin-right: 15px;
+  font-size: 15px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 {
+  width: 35%;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 ul:nth-child(2) {
+  width: 100%;
+  justify-content: flex-end;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 ul:nth-child(2) li {
+  margin-right: 10px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 ul:nth-child(2) li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #e5e5e5;
+  display: inline-block;
+  margin-left: 10px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 ul li {
+  font-size: 12px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:nth-child(1) div.sel2 ul li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #e5e5e5;
+  display: inline-block;
+  margin-left: 15px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div.middle {
+  border-top: 2px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 60px;
+  margin: 8px 0;
+  text-align: center;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div.middle span {
+  color: #808991;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div ul {
+  display: flex;
+  justify-content: space-between;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div ul .sel_on {
+  color: black;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div ul .sel_on2 {
+  border-bottom: 2px solid #666;
+  margin-bottom: -10px;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div ul li {
+  cursor: pointer;
+  color: #808991;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:last-child > span {
+  font-size: 12px;
+  font-weight: 300;
+  color: #8595a3;
+  cursor: pointer;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:last-child > span i {
+  font-size: 11px;
+  color: #8595a3;
+}
+.all .left_zone .content_all .review .star_zone .review_text > div:last-child .text_box {
+  width: 100%;
+  background-color: #f3f4f5;
+}
+.all .left_zone .content_all .more_img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -727,18 +846,18 @@ header .header_wrap .menu button {
   align-content: center;
   margin: 30px 0;
 }
-.all .left_zone .more_img .img_hide {
+.all .left_zone .content_all .more_img .img_hide {
   display: none;
 }
-.all .left_zone .more_img > div {
+.all .left_zone .content_all .more_img > div {
   width: 18%;
   text-align: center;
   margin: 50px 0;
 }
-.all .left_zone .more_img > div img {
+.all .left_zone .content_all .more_img > div img {
   width: 70%;
 }
-.all .left_zone .more_img > div .more_title {
+.all .left_zone .content_all .more_img > div .more_title {
   width: 70%;
   overflow: hidden;
   white-space: nowrap;
@@ -746,22 +865,22 @@ header .header_wrap .menu button {
   margin: 0 auto 5px;
   text-align: left;
 }
-.all .left_zone .more_img > div .more_title a {
+.all .left_zone .content_all .more_img > div .more_title a {
   font-size: 12px;
 }
-.all .left_zone .more_img > div .more_price {
+.all .left_zone .content_all .more_img > div .more_price {
   width: 70%;
   margin: 0 auto;
   display: block;
   font-size: 12px;
   text-align: left;
 }
-.all .left_zone .more_img > div .more_price a {
+.all .left_zone .content_all .more_img > div .more_price a {
   margin-left: 5px;
   font-size: 12px;
   color: #1f8ce6;
 }
-.all .left_zone .more_btn2 {
+.all .left_zone .content_all .more_btn2 {
   width: 92%;
   margin: 0 auto;
   height: 40px;
@@ -771,38 +890,37 @@ header .header_wrap .menu button {
   cursor: pointer;
   font-size: 14px;
 }
-.all .left_zone .more_btn2::after {
+.all .left_zone .content_all .more_btn2::after {
   content: "\f13a";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   margin-left: 5px;
 }
-.all .left_zone .more_btn2:hover {
+.all .left_zone .content_all .more_btn2:hover {
   background-color: #ccc;
 }
-
-.side {
+.all .side {
   width: 20%;
 }
-.side div:nth-child(1) {
+.all .side div:nth-child(1) {
   width: 207px;
   height: 207px;
 }
-.side div:nth-child(1) img {
+.all .side div:nth-child(1) img {
   width: 100%;
 }
-.side .text_all {
+.all .side .text_all {
   padding: 20px;
 }
-.side .text_all h5 {
+.all .side .text_all h5 {
   font-weight: 500;
   font-size: 13px;
   line-height: 2.5;
 }
-.side .text_all ul {
+.all .side .text_all ul {
   width: 185px;
 }
-.side .text_all ul li {
+.all .side .text_all ul li {
   width: 100%;
   border-top: 1px solid rgb(221, 221, 221);
   padding: 3px 0;
@@ -811,21 +929,21 @@ header .header_wrap .menu button {
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.side .text_all ul li span.num {
+.all .side .text_all ul li span.num {
   color: rgb(230, 73, 56);
   font-weight: 500;
   font-size: 12px;
   padding-right: 6px;
 }
-.side .text_all ul li span.num_text {
+.all .side .text_all ul li span.num_text {
   font-size: 12px;
   white-space: nowrap;
   font-weight: 300;
 }
-.side .text_all ul li span.num_text:hover {
+.all .side .text_all ul li span.num_text:hover {
   background-color: #ffeb60;
 }
-.side .text_all .more_btn {
+.all .side .text_all .more_btn {
   width: 185px;
   background-color: rgb(223, 223, 223);
   font-size: 11px;
@@ -835,20 +953,20 @@ header .header_wrap .menu button {
   color: rgb(51, 51, 51);
   cursor: pointer;
 }
-.side .text_all .more_btn span {
+.all .side .text_all .more_btn span {
   font-size: 8px;
   color: rgb(51, 51, 51);
 }
-.side .bar {
+.all .side .bar {
   width: 100%;
   padding: 10px 20px;
 }
-.side .bar > div {
+.all .side .bar > div {
   display: inline-block;
   width: 185px;
   position: relative;
 }
-.side .bar > div input {
+.all .side .bar > div input {
   width: 100%;
   height: 30px;
   background-color: rgb(223, 223, 223);
@@ -859,13 +977,13 @@ header .header_wrap .menu button {
   font-weight: 400;
   font-size: 14px;
 }
-.side .bar > div > div {
+.all .side .bar > div > div {
   position: absolute;
   top: 0;
   left: 10px;
   cursor: pointer;
 }
-.side .bar > div > div i {
+.all .side .bar > div > div i {
   font-size: 13px;
   line-height: 2.5;
 }

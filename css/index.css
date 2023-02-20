@@ -590,6 +590,7 @@ header .header_wrap .menu button {
   text-indent: 40px;
   display: flex;
   align-items: center;
+  margin-bottom: -20px;
 }
 .price .price_wrap .price_box_wrap .price_box1 .box1_all img {
   width: 57px;
