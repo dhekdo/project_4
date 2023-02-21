@@ -117,19 +117,22 @@ $(".star_text_point").click(function(){
 
 // 별 마우스오버 효과
 $(".star_text_point").hover(function(){
+    var starIndex = $(this).index();
+
     $(this).addClass("star_on").css("background-position", "50% -45px");
     $(this).prevAll().addClass("star_on").css("background-position", "50% -45px");
+    $(".tooltip > div").eq(starIndex).show().siblings().hide();
+    $(".star_text .top_text").hide();
+
 }, function(){
     $(this).nextAll().removeClass("star_on").css("background-position", "50% 0px");
 });
 
 $(".star_text_point").parent().mouseout(function(){
     $(".star_text_point").css("background-position", "50% 0px").removeClass("star_on");
+    $(".star_text .top_text").show();
+    $(".tooltip > div").hide();
 });
-
-// if( $(".star_text_point1").hasClass("star_on") == true ){
-//     $("star_text h2").
-// }
 
 // 리뷰 텍스트 구좌
 $(".sel2 ul").eq(0).show().siblings().hide();
