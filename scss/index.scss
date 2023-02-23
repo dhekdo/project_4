@@ -748,7 +748,6 @@ header {
             background-color: #f7f7f7;
             display: flex;
             justify-content: space-between;
-            // align-items: center;
     
             .audio_text_wrap {
                 width: 50%;
@@ -1063,19 +1062,22 @@ header {
 .view {
     width: 100%;
     height: 495px;
+    background-image: url(../img/review-bg.7113d143354a257d6ddad264072b913e.png);
+    background-size: 100%;
+    background-size: cover;
 
     .view_wrap {
-        width: 100%;
+        width: 1200px;
         height: 100%;
+        margin: 0 auto;
         position: relative;
-        background-image: url(../img/review-bg.7113d143354a257d6ddad264072b913e.png);
-        background-size: 100%;
+        
 
         .view_text {
             width: 400px;
             position: absolute;
             top: 80px;
-            right: 350px;
+            right: 0;
             margin-top: 20px;
             h2 {
                 @include title_font
@@ -1090,7 +1092,7 @@ header {
             height: 415.6px;
             position: absolute;
             top: -45px;
-            left: 450px;
+            left: 0;
             box-shadow: 10px 10px 30px rgb(0 0 0 / 30%);
 
             .view_thumbnail {

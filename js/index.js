@@ -247,13 +247,6 @@ $(".head_wrap li").click(function(){
     $(".audiomillie > div").eq(headIndex).show().siblings().hide();
 });
 
-// $(".swiper-pagination1 span").click(function(){
-//     var a = $(".swiper-pagination-bullet-active").index();
-// console.log(a);
-//     $(".audio_text2_box div").eq(a).show();
-// }
-// );
-
 // 오디오북 스와이퍼
 var swiper = new Swiper(".mySwiper", {
 
