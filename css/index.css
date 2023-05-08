@@ -243,6 +243,11 @@ header .header_wrap .menu button {
   height: 56px;
   cursor: pointer;
 }
+.video .video_wrap .video_img iframe {
+  width: 99.9%;
+  height: 99.9%;
+  border: none;
+}
 
 .best_seller {
   width: 100%;
@@ -1011,6 +1016,11 @@ header .header_wrap .menu button {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.view .view_wrap .view_img iframe {
+  width: 99.9%;
+  height: 99.9%;
+  border: none;
 }
 
 .qna_on {

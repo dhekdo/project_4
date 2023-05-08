@@ -612,6 +612,7 @@ header .header_wrap .menu button {
 .all .left_zone .content_all .content_video iframe {
   width: 100%;
   margin-bottom: 20px;
+  border: none;
 }
 .all .left_zone .content_all .review {
   width: 100%;
